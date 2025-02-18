@@ -1,0 +1,59 @@
+// ===================
+// Variables
+// ===================
+
+// Core Colors
+@white: #fff;
+@black: #000;
+@darkGray: #333;
+
+// Color assignments
+@color: token(colorTextLink);
+@hover: token(colorTextLinkHover);
+
+@altColor: token(colorTextLabel);
+@altHover: token(colorTextLabel);
+
+@bgColor: token(colorBrand);
+@tertiaryColor: token(colorBrand);
+@tertiaryHover: token(colorBackgroundButtonBrandHover);
+
+@textColor: token(colorTextDefault);
+@titleColor: token(colorTextLabel);
+@linkColor: token(colorTextLink);
+@inverseTextColor: token(colorTextInverse);
+@lightGray: #eee;
+@gray: #606060;
+@darkGray: #333;
+@borderColor: token(colorBorder);
+
+
+// Fonts (font assignments handled in typography.less)
+@font: token(fontFamily);
+@titleFont: Montserrat, sans-serif; // Can't find this design token listed anywhere!
+@altFont: 'Source Sans Pro',Lucida Grande,sans-serif;
+@fontSize: token(fontSizeMedium);
+
+@h1Size: 2rem; // token(fontSizeXxLarge);
+@h2Size: 1.5rem; //;  token(fontSizeXLarge);
+@h3Size: 1.25rem; //token(fontSizeLarge);
+@h4Size: 1.125rem; //token(fontSizeMediumA);
+@smallSize: .875rem; //token(fontSizeSmall);
+@xsmallSize: .625rem; //token(fontSizeXSmall);
+// @lineHeight: token(lineHeightText);
+
+@titleLineHeight: token(lineHeightHeading);
+
+// Layouts - in SF it's just sm,md,lg, no xs. Use min queries (mobile first)
+@screen-sm-max: 47.9375em;
+@screen-md-min: 48em;
+@screen-lg-min: 64.0625em;
+
+
+// Other
+@borderRadius: token(borderRadiusMedium);
+@paddingxSmall: token(spacingXSmall);
+@paddingSmall: token(spacingSmall);
+@paddingLarge: token(spacingLarge);
+@paddingXLarge: token(spacingXLarge);
+@gutter: @paddingxSmall;

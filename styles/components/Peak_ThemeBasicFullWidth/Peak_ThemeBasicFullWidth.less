@@ -1,0 +1,264 @@
+.THIS
+{
+    @import '../_base/components-common'; // variables and mixins
+    @import '../_base/_typography/_typography'; // base typography
+    @import '../_base/_components/_components'; // base components 
+
+
+
+    .slds-container--x-large,
+    .slds-container_x-large
+    {
+        max-width: @napili-max; // match the Napili default, 80rem is what this normal is and it's too wide
+    }
+
+    .cPeak_UtilityNavigation a svg
+    {
+        fill: #fff;
+    }
+    .siteforceServiceBody
+    {
+        position: relative;
+        z-index: 1;
+    }
+    .siteforceServiceBody .siteforceContentArea
+    {
+        background: #fff;
+    }
+    .siteforceServiceBody .cCurtainContainer
+    {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: none;
+
+        opacity: 0;
+    }
+    .siteforceServiceBody .cHeaderPanel
+    {
+        position: relative;
+
+        width: 100%;
+
+        -webkit-transition: background .8s ease;
+                transition: background .8s ease;
+        /* 7S replace and use token background-image: url();*/
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .siteforceServiceBody .cHeaderOverlay
+    {
+        height: inherit;
+
+        background: rgba(0, 0, 0, .2);
+    }
+    .siteforceServiceBody .cHeaderLine
+    {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 1rem .5rem 1rem .5rem;
+    }
+    .siteforceServiceBody .cCenterPanel
+    {
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .siteforceServiceBody .cCenterPanel:focus
+    {
+        outline: none;
+    }
+    .siteforceServiceBody .cFooterPanel .forceCommunityLanguagePicker .languagePickerMenu
+    {
+        bottom: 30px;
+    }
+    .siteforceServiceBody .cAltToggleNav
+    {
+        display: none;
+    }
+    .siteforceServiceBody .cAltToggleNav .slds-icon
+    {
+        fill: rgba(250, 250, 250, .9);
+    }
+    .siteforceServiceBody .cTopLeftCon
+    {
+        line-height: 3rem;
+
+        min-width: 2rem;
+
+        text-align: center;
+    }
+    .siteforceServiceBody .cNavBarCon
+    {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+    }
+    .siteforceServiceBody .cBrandingProfile
+    {
+        width: 25%;
+
+        text-align: center;
+    }
+    .siteforceServiceBody .cBrandingLogo
+    {
+        position: relative;
+
+        display: block;
+
+        width: 80%;
+        height: 3rem;
+
+        outline: 0;
+        /* 7S Remove and replace with token background-image: url();*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .siteforceServiceBody .cBrandingLogo:focus
+    {
+        box-shadow: 0 0 0 1px #2574a9;
+    }
+    .siteforceServiceBody .cSearchPublisher
+    {
+        min-width: 2rem;
+    }
+    .siteforceServiceBody .cSearchPublisher .mobile-search-icon
+    {
+        line-height: 3rem;
+
+        color: rgba(250, 250, 250, .9);
+    }
+    .siteforceServiceBody .cNotifications
+    {
+        line-height: 3rem;
+
+        position: relative;
+
+        text-align: center;
+    }
+    .siteforceServiceBody .cNotifications .unsNotificationsCounter
+    {
+        color: rgba(250, 250, 250, .9);
+    }
+    .siteforceServiceBody .cProfileCon
+    {
+        line-height: 3rem;
+
+        height: 3rem;
+    }
+    .siteforceServiceBody.bodyMenuMobile
+    {
+        position: absolute;
+        left: 0;
+    }
+    @media only screen and (min-width: 48em)
+    {
+        .siteforceServiceBody .cTopLeftCon
+        {
+            min-width: 0;
+        }
+        .siteforceServiceBody .search-wrapper,
+        .siteforceServiceBody .post-container
+        {
+            margin: 0 auto;
+        }
+        .siteforceServiceBody .cBrandingProfile
+        {
+            width: 15%;
+        }
+        .siteforceServiceBody .cProfileCon
+        {
+            width: 10%;
+        }
+        .siteforceServiceBody .cSearchPublisher
+        {
+            z-index: 10;
+
+            overflow: visible;
+
+            width: 70%;
+            height: 3rem;
+        }
+        .siteforceServiceBody .cNotifications
+        {
+            width: 5%;
+
+            text-align: right;
+        }
+        .siteforceServiceBody .cHeaderLine
+        {
+            padding: 2rem 1rem 4rem 1rem;
+        }
+    }
+    @media only screen and (min-width: 64.0625em)
+    {
+        .siteforceServiceBody .cNotifications
+        {
+            width: 5%;
+        }
+        .siteforceServiceBody .cProfileCon
+        {
+            width: 15%;
+        }
+    }
+    @media only screen and (max-width: 47.9375em)
+    {
+        .siteforceServiceBody .cProfileCon
+        {
+            min-width: 2rem;
+            max-width: 25%;
+            margin: 0 .25rem;
+        }
+        .siteforceServiceBody .cBrandingLogo
+        {
+            margin-left: .5rem;
+
+            background-position-x: left;
+        }
+        .siteforceServiceBody .cAltToggleNav
+        {
+            display: block;
+        }
+        .siteforceServiceBody .forceCommunityGlobalNavigation
+        {
+            overflow: hidden;
+
+            height: 0;
+            min-height: 0;
+        }
+        .siteforceServiceBody.bodyMenuMobile
+        {
+            position: fixed;
+            top: 0;
+            left: 80%;
+
+            overflow: visible;
+
+            width: 100%;
+
+            -webkit-transition: -webkit-transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s;
+                    transition:         transform ease .35s, left ease .35s, top ease .35s, box-shadow ease .35s, right ease .35s;
+
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+        }
+    }
+    .siteforceServiceBody .forceRelatedListCardDesktop .card-header .card-header-right .small.oneActionsRibbon a,
+    .siteforceServiceBody .forceRelatedListCardDesktop .card-body a.textUnderline.forceOutputLookup,
+    .siteforceServiceBody .forceRelatedListCardDesktop .card-footer a
+    {
+        color: #2574a9;
+    }
+    .siteforceServiceBody .analyticsEmbeddedChart .loadingPanel
+    {
+        background: transparent url(/projRes/analytics-platform/img/spinner_triangle.gif) no-repeat;
+    }
+}

@@ -1,0 +1,141 @@
+<!--
+  - Copyright (c) 2017. 7Summits inc.
+  -->
+
+<!--
+ - Created by francois korb on 7/14/17.
+ -->
+
+<aura:component description="ss_product_detail"
+                controller="pc_listController"
+                extends="c:ss_product_base"
+                implements="forceCommunity:availableForAllPageTypes, flexipage:availableForAllPageTypes, force:hasRecordId"
+                access="global">
+
+	<aura:attribute name="title"             type="string"  default="Product Detail" access="global"/>
+	<aura:attribute name="recordId"          type="String" 	access="global"/>
+	<aura:attribute name="showHeader"        type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showName"          type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showDescription"   type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showProductFamily" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showProductCode"   type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showPrice"         type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showAddToCart"     type="Boolean" default="true" access="global"/>
+	<aura:attribute name="showSchedulePayment"     type="Boolean" default="true" access="global"/>
+	<aura:attribute name="addToCartPosition" type="String"  default="Top"  access="global"/>
+	<aura:attribute name="checkoutUrl"      type="String"  default="/7s-product-checkout" access="public"/>
+	<aura:attribute name="cartIconName"      type="String"  default="custom:custom93" access="private"/>
+	<aura:attribute name="optionsQuantity"   type="List"    access="public"/>
+	<aura:attribute name="products"          type="object"/>
+	<aura:attribute name="product"           type="object"/>
+	<aura:attribute name="unitPriceLabel"    type="String" default="{!$Label.c.ss_pc_label_unit_price}" />
+
+	<aura:registerEvent name="updateCartButton" type="c:ss_cart_button_event"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:if isTrue="{!v.showHeader}">
+		<h1 class="slds-p-bottom--medium">
+			<c:ss_product_label_util text="{!v.title}"/>
+		</h1>
+	</aura:if>
+
+	<lightning:layout multipleRows="true"
+	                  horizontalAlign="space"
+	                  class="slds-grid_vertical-stretch slds-m-bottom_large">
+
+		<aura:if isTrue="{!v.showName}">
+			<lightning:layoutItem size="12"
+			                      class="slds-text-heading--small slds-p-bottom--medium slds-truncate">
+					{!v.product.name}
+			</lightning:layoutItem>
+		</aura:if>
+
+		<aura:if isTrue="{!v.showProductFamily}">
+			<lightning:layoutItem size="12"
+			                      class="slds-text-body--small slds-text-color--weak slds-p-bottom--medium">
+					{!v.product.family}
+			</lightning:layoutItem>
+		</aura:if>
+
+		<aura:if isTrue="{! !v.products.hideImages}">
+			<lightning:layoutItem flexibility="auto"
+			                      padding="around-small"
+			                      size="12"
+			                      mediumDeviceSize="3">
+				<aura:if isTrue="{! and(v.product.imageUrl != null, v.product.imageUrl != '')}">
+					<img src="{!v.product.imageUrl}"
+					     alt="{!v.product.name}"/>
+					<aura:set attribute="else">
+						<lightning:icon iconName="standard:product"
+						                size="large"
+						                alternativeText="product image"/>
+					</aura:set>
+				</aura:if>
+			</lightning:layoutItem>
+		</aura:if>
+
+		<lightning:layoutItem flexibility="no-grow"
+		                      padding="around-small"
+		                      size="12"
+		                      mediumDeviceSize="9">
+
+			<aura:if isTrue="{!v.showDescription}">
+				<lightning:layoutItem>
+					<p>
+							{!v.product.description}
+					</p>
+				</lightning:layoutItem>
+			</aura:if>
+
+			<aura:if isTrue="{!v.showProductCode}">
+				<lightning:layoutItem
+						class="slds-p-top--small slds-text-body--small slds-text-color--weak slds-p-bottom--small">
+						{!v.product.productCode}
+				</lightning:layoutItem>
+			</aura:if>
+
+			<aura:if isTrue="{! and(!v.products.hideUnitPrice, v.showPrice)}">
+				<lightning:layoutItem size="2">
+					<p class="slds-p-top--small slds-p-bottom--small">
+						<aura:if isTrue="{!v.product.userDefinedAmountAllowed}">
+							<lightning:input label="{!v.unitPriceLabel}" required="true"
+											 value="{!v.product.unitPrice}" type="number" step="0.01" formatter="currency"/>
+							<aura:set attribute="else">
+								<aura:if isTrue="{!v.products.usePoints}">
+									<lightning:formattedNumber value="{!v.product.points}"/>
+									<aura:set attribute="else">
+										<lightning:formattedNumber value="{!v.product.unitPrice}"
+																   style="currency"/>
+									</aura:set>
+								</aura:if>
+							</aura:set>
+						</aura:if>
+					</p>
+				</lightning:layoutItem>
+			</aura:if>
+
+			<aura:if isTrue="{! and(v.product.isSchedulable, v.showSchedulePayment)}">
+				<c:ss_product_schedule_button iconName="{!v.cartIconName}"
+											  productId="{!v.product.productId}"
+											  productName="{!v.product.name}"
+											  unitPrice="{!v.products.usePoints ? v.product.points : v.product.unitPrice}"
+											  showQuantity="true"
+											  optionsQuantity="{!v.optionsQuantity}"
+											  checkoutUrl="{!v.checkoutUrl}"/>
+			<aura:set attribute="else">
+				<aura:if isTrue="{! and(!v.products.hideAddToCart, v.showAddToCart)}">
+					<c:ss_product_cart_button iconName="{!v.cartIconName}"
+											  productId="{!v.product.productId}"
+											  productName="{!v.product.name}"
+											  unitPrice="{!v.products.usePoints ? v.product.points : v.product.unitPrice}"
+											  showQuantity="true"
+											  optionsQuantity="{!v.optionsQuantity}"/>
+				</aura:if>
+				</aura:set>
+			</aura:if>
+
+		</lightning:layoutItem>
+	</lightning:layout>
+
+</aura:component>

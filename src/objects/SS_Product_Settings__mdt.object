@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>7Summits Product Catalog component settings</description>
+    <fields>
+        <fullName>Account_Id__c</fullName>
+        <description>Default account ID for internal users</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Set a default account ID for internal users</inlineHelpText>
+        <label>Account Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hide_Add_to_Cart__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Hide product add to cart button</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Check to hide the Add to Cart button in the product catalog.</inlineHelpText>
+        <label>Hide Add to Cart</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hide_Images__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Hide product images</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Check to hide all image in the product catalog</inlineHelpText>
+        <label>Hide Images</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hide_Unit_Price__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Hide product unit price</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Check to hide the product unit price</inlineHelpText>
+        <label>Hide Unit Price</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pricebook_Id__c</fullName>
+        <description>Pricebook ID to use for the product catalog</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Enter the price book ID to use for the product catalog</inlineHelpText>
+        <label>Pricebook Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Family_List_IDs__c</fullName>
+        <description>List of product IDs to use for product family tile view.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>List of product IDs to use for product family tile view images.</inlineHelpText>
+        <label>Product Family List IDs</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity_List__c</fullName>
+        <defaultValue>&quot;1,2,3,4,5,6,7,8,9,10,15,20,30,50&quot;</defaultValue>
+        <description>Quantity option list</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>CSV list of quantity options</inlineHelpText>
+        <label>Quantity List</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suggest_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Send contact an email when suggesting a product - default is unchecked</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Send an email to a contact when suggesting a product - uncheck for sanbox</inlineHelpText>
+        <label>Suggest Send Email</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Use_Points__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Use Points rather than Currency when this is checked</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Check to enable points rather than currency for product.</inlineHelpText>
+        <label>Use Points</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>SS Product Setting</label>
+    <pluralLabel>SS Product Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

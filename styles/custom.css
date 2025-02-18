@@ -1,0 +1,48 @@
+/*  This is the CSS used in Community Builder's Custom Stylesheet.
+    NOT our usual approach, but the FED for this community was intended to be
+    out-of-the-box. Changes so far are minor, but capturing here because
+    version control is a good thing!
+ */
+
+.profileName {color: white;}
+.down-arrow {color: white;}
+.cHeaderPanel {background-color: black!important;}
+.forceCommunityGlobalNavigation {background-color: #ffcc00!important;}
+
+
+/* Custom Font */
+
+html,body {
+    font-family:'FrutigerLTW01-45Light722105',Lato,sans-serif !important;
+}
+
+.forceCommunityGlobalNavigation .slds-list__item a, .forceCommunityGlobalNavigation .slds-list__item button {
+    font-family:'FrutigerLTW01-67BoldCn',Late,sans-serif !important;
+}
+
+
+/* Fix size of Logo & Search */
+
+.cPeak_ThemeBasicFullWidth .siteforceServiceBody .cBrandingProfile {
+    width: 25% !important;
+    margin-top:-10px !important;
+}
+
+.cPeak_ThemeBasicFullWidth .siteforceServiceBody .cBrandingLogo {
+    width:90% !important;
+}
+
+.cPeak_ThemeBasicFullWidth .siteforceServiceBody .cSearchPublisher {
+    width: 50% !important;
+}
+
+
+/* Misc */
+span.uiImage {
+    display: inline-block;
+    width: 32px;
+}
+
+.salesforceIdentitySocialLogin2.or {
+    font-size:16px !important;
+}

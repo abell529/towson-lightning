@@ -1,0 +1,42 @@
+// ===================
+// Overrides to SLDS buttons (but still use branding editor!)
+// ===================
+.slds-button--brand,
+.slds-button--neutral,
+.slds-button--inverse
+{
+    .btn();
+}
+
+.slds-button--brand
+{
+    border: none;
+}
+
+
+.slds-button--inverse
+{
+    &:link,
+    &:visited
+    {
+        color: @inverseTextColor;
+    }
+
+    &:hover,
+    &:active
+    {
+        color: @inverseTextColor;
+    }
+}
+
+.CCEVENTSLCSVNSUMMITS_Events_Header,
+.CCEVENTSLCSVNSUMMITS_Event_Filter,
+.CCNEWSLCSVNSUMMITS_News_DisplayMode
+{
+    .slds-button
+    {
+        line-height: 2rem;
+
+        padding: 4px 16px;
+    }
+}

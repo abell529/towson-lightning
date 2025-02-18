@@ -1,0 +1,46 @@
+/**
+ * Towson_Lightning - Generates the assets used for TU Connect
+ * @version 1.0.0
+ * @author 7Summits
+ *
+ * COMPILED FILE DO NOT DIRECTLY EDIT
+ */
+.THIS {
+  color: #ffffff;
+  background: #000000;
+}
+.THIS .slds-p-vertical--large {
+  padding-top: 0;
+}
+.THIS .copyright {
+  border-right: 1px solid #ffffff;
+}
+@media screen and (max-width: 649px) {
+  .THIS .copyright {
+    width: 100%;
+    border-right: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .THIS .copyright span {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .THIS .slds-col--bump-left {
+    width: 100%;
+    margin-left: .75rem;
+  }
+}
+.THIS hr {
+  margin: 0;
+  margin-bottom: token(spacingLarge);
+}
+.THIS a:link,
+.THIS a:visited {
+  color: #ffffff;
+}
+.THIS a:hover,
+.THIS a:active {
+  color: #ffffff;
+}

@@ -1,0 +1,18 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component access="global"
+                controller="SVNSUMMITS_EventListController">
+
+    <ltng:require styles="{!$Resource.SVNSUMMITS_Event_SemanticUI + '/SemanticUI/dist/components/dropdown.min.css'}"
+		scripts="{!join(',',
+    			$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/LightningLookup/jquery-2.1.1.min.js',
+    			$Resource.SVNSUMMITS_Event_SemanticUI + '/SemanticUI/dist/components/dropdown.min.js'
+                 )}"
+    	afterScriptsLoaded="{!c.doInit}" />
+
+    <aura:attribute name="searchText" type="String"/>
+    <aura:attribute name="sitePrefix" type="String"/>
+    <aura:attribute name="placeholderText" type="String" default="SEARCH" access="global"/>
+
+    <ui:inputText value="{!v.searchText}" placeholder="{!v.placeholderText}" keyup="{!c.performSearch}"/>
+
+</aura:component>

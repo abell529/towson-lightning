@@ -1,0 +1,57 @@
+/**
+ * Towson_Lightning - Generates the assets used for TU Connect
+ * @version 1.0.0
+ * @author 7Summits
+ *
+ * COMPILED FILE DO NOT DIRECTLY EDIT
+ */
+.THIS {
+  min-height: 15px;
+  background-color: #000000;
+}
+.THIS a {
+  font-family: 'FrutigerLTW01-45Light722105', Lato, sans-serif !important;
+  font-size: .8em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.THIS a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.THIS a:link,
+.THIS a:visited {
+  color: #ffffff;
+}
+.THIS a:link svg,
+.THIS a:visited svg {
+  fill: #ffffff;
+}
+.THIS a:hover,
+.THIS a:active {
+  color: #ffffff;
+}
+.THIS a:hover svg,
+.THIS a:active svg {
+  fill: #ffffff;
+}
+.THIS .navHamburger {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .THIS .navHamburger {
+    display: inline;
+  }
+}
+@media screen and (max-width: 767px) {
+  .THIS .navHamburger ~ .cPeak_NavigationLink {
+    display: none;
+  }
+}
+.THIS .showNav {
+  transition: height 2s;
+}
+.THIS .showNav .cPeak_NavigationLink {
+  display: block;
+  width: 50%;
+}

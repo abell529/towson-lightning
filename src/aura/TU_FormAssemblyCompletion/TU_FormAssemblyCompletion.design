@@ -1,0 +1,20 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/27/18.
+ -->
+
+<design:component>
+    <design:attribute name="variable"
+                      label="Form Assembly variable"
+                      description="This is the variable used to preload data in Form Assembly for RSVP">
+    </design:attribute>
+    <design:attribute name="eventUrl"
+                      label="Event URL"
+                      description="Specify the URL for non-paid events">
+    </design:attribute>
+    <design:attribute name="eventProductsUrl"
+                      label="Event Products URL"
+                      description="Specify the URL for paid events">
+    </design:attribute>
+
+</design:component>

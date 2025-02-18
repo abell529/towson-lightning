@@ -1,0 +1,66 @@
+@import '../_base/components-common';
+.THIS
+{
+    min-height: 15px; // approximate height of button plus padding (so there's no flash of no-height before contents render)
+
+    background-color: @black;
+
+    a
+    {
+        font-family: 'FrutigerLTW01-45Light722105',Lato,sans-serif !important;
+        font-size: .8em;
+
+        letter-spacing: .08em;
+        text-transform: uppercase;
+
+        svg
+        {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        &:link,
+        &:visited
+        {
+            color: @white;
+            svg
+            {
+                fill: @white;
+            }
+        }
+
+        &:hover,
+        &:active
+        {
+            color: @white;
+            svg
+            {
+                fill: @white;
+            }
+        }
+    }
+    .navHamburger
+    {
+        display: none;
+        @media screen and (max-width: 767px)
+        {
+            display: inline;
+        }
+        ~ .cPeak_NavigationLink
+        {
+            @media screen and (max-width: 767px)
+            {
+                display: none;
+            }
+        }
+    }
+    .showNav
+    {
+        transition: height 2s;
+        .cPeak_NavigationLink
+        {
+            display: block;
+
+            width: 50%;
+        }
+    }
+}

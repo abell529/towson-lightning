@@ -1,0 +1,58 @@
+config/
+*.project
+*.sublime-project
+*.sublime-workspace
+*.log
+*.sublime-settings
+deploy/
+debug/
+
+.idea/illuminatedCloud.xml
+.idea/workspace.xml
+IlluminatedCloud/ideas/OfflineSymbolTable.zip
+
+#ant file
+/build.properties
+
+# IntelliJ
+.idea/
+.project/
+IlluminatedCloud/
+resource-bundles/
+*.iml
+
+# Eclipse IDE
+.metadata/
+
+# NPM/Gulp stuff to ignore
+*/node_modules/*
+node_modules
+out
+*/out/*
+
+.DS_Store
+.AppleDouble
+.LSOverride
+mm.log
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+dev
+static
+*.metadata*
+projectFilesBackup/

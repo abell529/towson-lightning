@@ -1,0 +1,24 @@
+/**
+ * Towson_Lightning - Generates the assets used for TU Connect
+ * @version 1.0.0
+ * @author 7Summits
+ *
+ * COMPILED FILE DO NOT DIRECTLY EDIT
+ */
+.THIS {
+  font-style: italic;
+  color: #ffffff;
+  background: #000000;
+}
+.THIS .slds-p-vertical--large {
+  margin-bottom: 0;
+}
+.THIS a:link,
+.THIS a:visited {
+  font-weight: bold;
+  color: #ffffff;
+}
+.THIS a:hover,
+.THIS a:active {
+  color: #ffffff;
+}

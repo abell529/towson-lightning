@@ -1,0 +1,53 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by 7Summits - Joe Callin on 3/29/18.
+-->
+<aura:component implements="forceCommunity:layout" description="TU Homepage Layout" access="global">
+    <aura:attribute name="ContentHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="FeaturedContent" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="FeaturedSidebar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="WideContent" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="Content" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="Sidebar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="ContentFooter" type="Aura.Component[]" required="false"/>
+
+    <lightning:layout horizontalAlign="center" class="layout-row slds-p-horizontal_medium">
+        <lightning:layoutItem size="12" class="slds-container_x-large">
+            {!v.ContentHeader}
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="center" class="layout-row slds-p-horizontal_medium">
+        <lightning:layoutItem size="12" class="slds-container_x-large">
+            <lightning:layout multipleRows="true" class="slds-grid_pull-padded-small">
+                <lightning:layoutItem flexibility="grow" size="12" mediumDeviceSize="6" class="slds-p-horizontal_small">
+                        {!v.FeaturedContent}
+                </lightning:layoutItem>
+                <lightning:layoutItem flexibility="grow" size="12" mediumDeviceSize="6" class="slds-p-horizontal_small">
+                        {!v.FeaturedSidebar}
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="layout-row">
+        <lightning:layoutItem size="12">
+                {!v.WideContent}
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="center" class="layout-row slds-p-horizontal_medium">
+        <lightning:layoutItem size="12" class="slds-container_x-large">
+            <lightning:layout multipleRows="true" class="slds-grid_pull-padded-small">
+                <lightning:layoutItem size="12" mediumDeviceSize="8" class="slds-p-horizontal_small">
+                        {!v.Content}
+                </lightning:layoutItem>
+                <lightning:layoutItem size="12" mediumDeviceSize="4" class="slds-p-horizontal_small">
+                        {!v.Sidebar}
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout horizontalAlign="center" class="layout-row slds-p-horizontal_medium">
+        <lightning:layoutItem size="12" class="slds-container_x-large">
+                {!v.ContentFooter}
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

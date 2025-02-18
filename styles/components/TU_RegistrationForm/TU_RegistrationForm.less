@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018. 7Summits Inc.
+ * Created by 7Summits - Joe Callin on 3/27/18.
+*/
+@import '../_base/components-common';
+
+.THIS
+{
+    color: #fff;
+
+    .slds-form-element__label
+    {
+        display: none;
+    }
+    .slds-grow
+    {
+        width: 100%;
+    }
+    .form-item
+    {
+        position: relative;
+
+        padding-bottom: 2.125rem;
+        .login-icon
+        {
+            position: absolute;
+            z-index: 1;
+            top: 9px;
+            left: .75rem;
+        }
+        input
+        {
+            line-height: normal;
+
+            padding: .75rem .75rem .75rem 2.25rem;
+
+            color: @textColor;
+            border-radius: 0;
+        }
+        .slds-form-element__help
+        {
+            position: absolute;
+        }
+    }
+    .button-container
+    {
+        position: relative;
+        button
+        {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.375rem;
+
+            width: 100%;
+            padding: .625rem 1rem;
+
+            transition: all .15s linear;
+
+            border-radius: 0;
+            &:focus
+            {
+                border-color: @bgColor;
+                outline: none;
+                background-color: @bgColor;
+                box-shadow: none;
+                &:hover
+                {
+                    border-color: @tertiaryHover;
+                    background-color: @tertiaryHover;
+                }
+            }
+        }
+        .slds-spinner_container
+        {
+            background-color: rgba(0,0,0,.5);
+        }
+    }
+}

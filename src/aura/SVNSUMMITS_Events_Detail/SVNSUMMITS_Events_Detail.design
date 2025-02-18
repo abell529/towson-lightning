@@ -1,0 +1,46 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component label="7S Events Detail">
+    <design:attribute name="debugMode"
+                      label="Debug Mode"
+                      description="Enable/disable debug mode"/>
+
+	<design:attribute name="showVolunteerButton"
+	                  label="Show volunteer button"
+	                  description="Enable to show volunteer button and edit event volunteers"/>
+	<design:attribute name="useTopics"
+	                  label="Require topics"
+	                  description="Require the user to select at least one topic"/>
+	<design:attribute name="hideAddToCalendar"
+	                  label="Hide Add To Calendar"
+	                  description="Enable/disable Add to Calendar" />
+	<design:attribute name="addToCalendarButtonText"
+	                  label="Add to Calendar button text"
+	                  description="Button Text" />
+	<design:attribute name="iCalendar"
+	                  label="Show add to iCalendar"
+	                  description="Add iCalendar to the Add to Calendar list"/>
+	<design:attribute name="googleCalendar"
+	                  label="Show add to Google calendar"
+	                  description="Add Google to the Add to Calendar list"/>
+	<design:attribute name="outlook"
+	                  label="Show add to Outlook calendar"
+	                  description="Add Outlook to the Add to Calendar list"/>
+	<design:attribute name="outlookOnline"
+	                  label="Show add to Outlook Online calendar"
+	                  description="Add Outlook online to the Add to Calendar list"/>
+	<design:attribute name="yahooCalendar"
+	                  label="Show add to Yahoo! calendar"
+	                  description="Add Yahoo! to the Add to Calendar list"/>
+	<design:attribute name="atcPlainText"
+	                  label="Use plain text (ATC)"
+	                  description="Use plain text for the event detail with Add to Calendar"/>
+
+	<design:attribute name="limitToSpecificGroups"
+	                  label="Enable Limit to Specific Groups?"
+	                  description="Check to limit to specified groups only"/>
+
+    <design:attribute name="recordId"
+                      label="Record Id"
+                      default="{!recordId}"
+                      description="Set to {!recordId} to pass the page's record Id."/>
+</design:component>

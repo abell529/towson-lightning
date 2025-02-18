@@ -1,0 +1,2627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Duplicate_User_Exists</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate User Exists</shortDescription>
+        <value>The email address you entered is associated with an existing user. If you forgot your password, click on the forgot password link to reset your password. If you are having trouble logging in, please contact us at admissions@towson.edu. If you wish to create a new user, please enter a different email address.</value>
+    </labels>
+    <labels>
+        <fullName>Event</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event</shortDescription>
+        <value>Event</value>
+    </labels>
+    <labels>
+        <fullName>TU_Cancel_AttendeeSuccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU cancel Attendee Success Message</shortDescription>
+        <value>Event RSVP cancelled successfully!</value>
+    </labels>
+    <labels>
+        <fullName>TU_Cart_Text</fullName>
+        <categories>community</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU_Cart_Text</shortDescription>
+        <value>This text will show up to the left of the cart. I&apos;m writing a lot here so we can test what that would look like!</value>
+    </labels>
+    <labels>
+        <fullName>TU_Event_FULL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU Event is Full</shortDescription>
+        <value>Event Full</value>
+    </labels>
+    <labels>
+        <fullName>TU_Groups_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU Groups Intro</shortDescription>
+        <value>Groups are a great way to get connected!</value>
+    </labels>
+    <labels>
+        <fullName>TU_My_Groups</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU My Groups</shortDescription>
+        <value>My Groups</value>
+    </labels>
+    <labels>
+        <fullName>TU_Order_Completion_Header</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU Order Completion Header</shortDescription>
+        <value>Order Summary</value>
+    </labels>
+    <labels>
+        <fullName>TU_Order_Completion_text1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Completion description</shortDescription>
+        <value>Your Order summary is listed below.</value>
+    </labels>
+    <labels>
+        <fullName>TU_Order_Completion_text2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Order Completion description</shortDescription>
+        <value>Thank you for your Order!</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Cancel</shortDescription>
+        <value>Cancel RSVP</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Confirm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Confirm</shortDescription>
+        <value>RSVP</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Confirm_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RSVP Ready to Confirm Intro</shortDescription>
+        <value>Click the RSVP button to reserve your spot.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Confirmed_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Confirmed Intro</shortDescription>
+        <value>Your registration to this event is confirmed!</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Continue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Continue</shortDescription>
+        <value>Continue</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Continue_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Continue Intro</shortDescription>
+        <value>Please complete the form below to register for the event.  Once completed, click the Submit button.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Detail_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Detail Title</shortDescription>
+        <value>Attending this event?</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_FULL_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Full Intro</shortDescription>
+        <value>We&apos;re sorry but this event is full and no longer accepting RSVPs.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Guests_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Guests Title</shortDescription>
+        <value>Additional Guests</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Invite_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Invite Intro</shortDescription>
+        <value>You have been invited to register for this event. Please confirm your registration.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Invited</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Invited</shortDescription>
+        <value>Confirm Invite</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Payment_Required</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Payment Required</shortDescription>
+        <value>Payment</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Payment_Required_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Payment Required Intro</shortDescription>
+        <value>Payment is required to confirm your RSVP.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Token</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Token</shortDescription>
+        <value>Invalid edit token. Please check your RSVP confirmation email.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Waitlist</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Waitlist</shortDescription>
+        <value>Wait List</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Waitlist_Added_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Waitlist Added Intro</shortDescription>
+        <value>Thank you for your 
+interest in this event.  Our 
+capacity is full, but you 
+have been added to the 
+Wait List.  You will receive 
+an email if a spot opens up.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Waitlist_Intro</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Waitlist Intro</shortDescription>
+        <value>This event is currently full 
+but you can click the 
+button to be added to the 
+wait list.</value>
+    </labels>
+    <labels>
+        <fullName>TU_RSVP_Waitlist_Remove</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU RSVP Waitlist Remove</shortDescription>
+        <value>Remove from Wait List</value>
+    </labels>
+    <labels>
+        <fullName>TU_Recipient_Name_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recipient Name</shortDescription>
+        <value>Recipient Name</value>
+    </labels>
+    <labels>
+        <fullName>TU_Special_Instructions_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Instructions</shortDescription>
+        <value>Special Instructions</value>
+    </labels>
+    <labels>
+        <fullName>TU_Special_Message_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Special Message</shortDescription>
+        <value>Special Message</value>
+    </labels>
+    <labels>
+        <fullName>TU_Update_AttendeeSuccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TU Update Attendee Success Message</shortDescription>
+        <value>Event RSVP updated successfully!</value>
+    </labels>
+    <labels>
+        <fullName>TU_Update_Cart</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Update Cart Button</shortDescription>
+        <value>Update Cart</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Copyright</fullName>
+        <categories>7S Utility Components</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Copyright</shortDescription>
+        <value>Copyright</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Explore_More_Groups</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Explore More Groups</shortDescription>
+        <value>Explore More Groups</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Featured_Groups</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Featured Groups</shortDescription>
+        <value>Featured Groups</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Groups_Intro</fullName>
+        <categories>7S My Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Groups Intro</shortDescription>
+        <value>Groups are a great way to get connected!</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Help_Prompt</fullName>
+        <categories>7S Utility Components</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Help Prompt</shortDescription>
+        <value>Help</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Join_this_group</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Join this group</shortDescription>
+        <value>Join this group</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Loading</fullName>
+        <categories>7S Utility Components</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Loading</shortDescription>
+        <value>Loading</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Members</fullName>
+        <categories>Members</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>X7S_Members</shortDescription>
+        <value>Members</value>
+    </labels>
+    <labels>
+        <fullName>X7S_More_Groups</fullName>
+        <categories>7S My Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S More Groups</shortDescription>
+        <value>More groups</value>
+    </labels>
+    <labels>
+        <fullName>X7S_My_Groups</fullName>
+        <categories>7S My Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S My Groups</shortDescription>
+        <value>My Groups</value>
+    </labels>
+    <labels>
+        <fullName>X7S_No_Groups_Joined</fullName>
+        <categories>7S My Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S No Groups Joined</shortDescription>
+        <value>No groups joined</value>
+    </labels>
+    <labels>
+        <fullName>X7S_No_Groups_Joining</fullName>
+        <categories>7S My Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S No Groups Joining</shortDescription>
+        <value>No groups joined</value>
+    </labels>
+    <labels>
+        <fullName>X7S_Sitemap_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S Sitemap Link</shortDescription>
+        <value>(yoursite)/Peak_Sitemap</value>
+    </labels>
+    <labels>
+        <fullName>X7S_View_Profile</fullName>
+        <categories>7S People</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>7S View Profile</shortDescription>
+        <value>View Profile</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_articleLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Article Name</shortDescription>
+        <value>Article Name</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_dateCreatedLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Date Created</shortDescription>
+        <value>Date Modified</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_noResultsLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for no result found search</shortDescription>
+        <value>No results for</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_pagerNextLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for next button</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_pagerPageLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for pagination</shortDescription>
+        <value>page</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_pagerPrevlabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for previous button</shortDescription>
+        <value>Prev</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_pagerTypeLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for type of information paging</shortDescription>
+        <value>articles</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_searchPlaceholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Placeholder for article search</shortDescription>
+        <value>Start your product search here . . .</value>
+    </labels>
+    <labels>
+        <fullName>peak_knowledgeFilter_viewsLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Article views label</shortDescription>
+        <value>Views</value>
+    </labels>
+    <labels>
+        <fullName>ss_button_Unfollow</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Un follow</shortDescription>
+        <value>Unfollow</value>
+    </labels>
+    <labels>
+        <fullName>ss_email_suggestBody</fullName>
+        <categories>UI</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email body: {0}contact name, {1}product name {2}price, {3}link, {4}sender</shortDescription>
+        <value>{0}
+
+            Take a look at this product that I’ve personally selected for you:
+
+            Product Name : {1}
+            Product Price: {2}
+            Product Link : {3}
+
+            Thanks,
+            {4}</value>
+    </labels>
+    <labels>
+        <fullName>ss_email_suggestSubject</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email subject line - {0} product name</shortDescription>
+        <value>Recommended Just for You: {0}</value>
+    </labels>
+    <labels>
+        <fullName>ss_event_guest_user_volunteer_action</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ss event guest user volunteer action</shortDescription>
+        <value>to sign up for these volunteer tasks</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_errorEventDetails</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invalid event details</shortDescription>
+        <value>Please fill out the Event Description</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AddAbilityToRSVP</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add ability to RSVP to the event</shortDescription>
+        <value>Add ability to RSVP to the event</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AddEventPricing</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add event pricing and payment link</shortDescription>
+        <value>Add event pricing and payment link</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AddNew</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add New</shortDescription>
+        <value>Add New</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AddNewEvent</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add New Event</shortDescription>
+        <value>Add New Event</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AddToCalendar</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add To Calendar</shortDescription>
+        <value>Add To Calendar</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Address</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Address</shortDescription>
+        <value>Address</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AllDayEvent</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All Day Event</shortDescription>
+        <value>All Day Event</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_AllEvents</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All Events</shortDescription>
+        <value>All Events</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_BookEventTicket</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>BOOK EVENT TICKET</shortDescription>
+        <value>BOOK EVENT TICKET</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Calendar</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Calendar</shortDescription>
+        <value>Calendar</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_CancelButtonLabel</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CANCEL</shortDescription>
+        <value>CANCEL</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Clear</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Close</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_CreateNewEvent</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create New Event</shortDescription>
+        <value>Create New Event</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Dates</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Dates</shortDescription>
+        <value>Dates</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Edit</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EditEvent</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EDIT EVENT</shortDescription>
+        <value>EDIT EVENT</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EditVolunteerOpportunities</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit Volunteer Opportunities</shortDescription>
+        <value>EDIT VOLUNTEER OPPORTUNITIES</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EndDate</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>End Date</shortDescription>
+        <value>End Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EnterDescriptiveEventTitle</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please enter descriptive Event title.</shortDescription>
+        <value>Please enter descriptive Event title.</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EnterEventDatesAndLocation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Enter event&apos;s start and end dates and location.</shortDescription>
+        <value>Enter event&apos;s start and end dates and location</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EnterEventDetails</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Enter Event Details here</shortDescription>
+        <value>Enter Event Details here</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventDatesAndLocation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Dates and Location</shortDescription>
+        <value>Event Dates and Location</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventDescDescription</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please put detailed overview of the event</shortDescription>
+        <value>Please put detailed overview of the event that will show up on the Event Details page.</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventDescription</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Description</shortDescription>
+        <value>Event Description</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventLocationName</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event location name</shortDescription>
+        <value>Event location name</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventParticipationOptions</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Participation Options</shortDescription>
+        <value>Event Participation Options</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventTitle</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Title</shortDescription>
+        <value>Event Title</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Events</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Events</shortDescription>
+        <value>Events</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_EventsList</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Events List</shortDescription>
+        <value>Events List</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_ExploreOther</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Explore Other</shortDescription>
+        <value>Explore Other</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_ExternalEventPaymentURL</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>URL to an external event payment processing system</shortDescription>
+        <value>URL to an external event payment processing system</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_FeaturedEvents</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Featured Events</shortDescription>
+        <value>Featured Events</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Follow</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Follow</shortDescription>
+        <value>Follow</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Following</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Following</shortDescription>
+        <value>Following</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_From</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>From</shortDescription>
+        <value>From</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Group</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Group</shortDescription>
+        <value>Group</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_InputRequired</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Input required form fields</shortDescription>
+        <value>Input required form fields</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_LimitToSpecificGroups</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Associate this item with a specific Group</shortDescription>
+        <value>Associate this item with a specific Group</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_LimitToSpecificGroupsTxt</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>If selected, this item will be associated with a group.</shortDescription>
+        <value>If selected, this item will be associated with a group.</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_List</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List</shortDescription>
+        <value>List</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_LocationURL</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Location URL</shortDescription>
+        <value>Location URL</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_LocationUrlDescription</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Link to google maps or web link to an online event.</shortDescription>
+        <value>Link to google maps or web link to an online event.</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_More_volunteers_needed</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>More volunteers needed</shortDescription>
+        <value>More volunteers needed</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_NewEvent</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Event</shortDescription>
+        <value>New Event</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Next</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_No</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No</shortDescription>
+        <value>Not attending</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Page</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Page</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_PeopleAttending</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Attending</shortDescription>
+        <value>Attending</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Previous</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Remove_me</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remove me</shortDescription>
+        <value>Remove me</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_SaveButtonLabel</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SAVE</shortDescription>
+        <value>SAVE</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_SelectButtonLabel</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SELECT</shortDescription>
+        <value>SELECT</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_SelectTopics</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Topics</shortDescription>
+        <value>Select Topics</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_ShowRSVP_Counter</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show RSVP counter when number of responses more than</shortDescription>
+        <value>Show RSVP counter when number of responses more than</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Show_More</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show More</shortDescription>
+        <value>Show More</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Sign_Up</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sign Up</shortDescription>
+        <value>Sign Up</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_SortedBy</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sorted by</shortDescription>
+        <value>Sorted by</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_StartDate</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Start Date</shortDescription>
+        <value>Start Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_TicketPrice</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ticket price</shortDescription>
+        <value>Ticket price</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Tile</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tile</shortDescription>
+        <value>Tile</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_To</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_TopAttendance</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Top Attendance</shortDescription>
+        <value>Top Attendance</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Upcoming</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Upcoming</shortDescription>
+        <value>Upcoming</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_UploadFeaturedPhoto</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Upload a Featured Photo</shortDescription>
+        <value>Upload a Featured Photo</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_UploadFeaturedPhotoDescription</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Featured image will appear if the article is featured</shortDescription>
+        <value>Featured image will appear if the article is featured. You can add more images in the body of the article
+			below. Recommended image size: 787 x 343 px. File types supported: JPG, PNG, or GIF.</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_VenueInformation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Venue information and directions</shortDescription>
+        <value>Venue information and directions</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_VolunteerOpportunities</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Volunteer Opportunities</shortDescription>
+        <value>Volunteer Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Volunteering</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Volunteering</shortDescription>
+        <value>Volunteering</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_WillNotAttend</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Will not attend&gt;</shortDescription>
+        <value>Will not attend</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_WillYouAttend</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Will you attend?</shortDescription>
+        <value>Will you attend?</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Yes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Yes</shortDescription>
+        <value>Attending</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_Youre_signed_up</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You&apos;re signed up</shortDescription>
+        <value>You&apos;re signed up!</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_add_task</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Task</shortDescription>
+        <value>Add Task</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_criteria</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Criteria</shortDescription>
+        <value>Criteria</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_locationFilter</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Location</shortDescription>
+        <value>Location</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_map</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>map</shortDescription>
+        <value>map</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_name</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_placeholderLocation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search locations</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_remove</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remove</shortDescription>
+        <value>Remove</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_searchLocation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by location</shortDescription>
+        <value>Filter by location name</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_show_less</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss evt label show less</shortDescription>
+        <value>Show Less</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_task</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Task</shortDescription>
+        <value>Task</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_task_name</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Task Name</shortDescription>
+        <value>Task Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_typeAheadLocation</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search locations</shortDescription>
+        <value>Search locations</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_label_volunteers_needed</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Volunteers Needed</shortDescription>
+        <value>Volunteers Needed</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_login_register</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss evt login register</shortDescription>
+        <value>Login / Register</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_task_signup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ss evt task signup</shortDescription>
+        <value>Task Sign Up</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_text_selectAll</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select all</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_volunteer_desc</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Volunteer Description</shortDescription>
+        <value>Volunteer Description</value>
+    </labels>
+    <labels>
+        <fullName>ss_evt_volunteer_desc_help</fullName>
+        <categories>7S Events</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Volunteer Description Help</shortDescription>
+        <value>Please enter a detailed overview of the volunteer opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_button_Join</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>join this group</shortDescription>
+        <value>Join</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_button_Previous</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous button label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_button_next</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next button label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_button_nextss_grp_button_next</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next button label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_All_Groups</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All Groups</shortDescription>
+        <value>All Groups</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Date_Created_Newest</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date Created: Newest</shortDescription>
+        <value>Date Created (Newest)</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Date_Created_Oldest</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date Created: Oldest</shortDescription>
+        <value>Date Created (Oldest)</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Explore_Relevant_Groups</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Explore Relevant Groups</shortDescription>
+        <value>Alumni Alliances</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Groups</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Groups</shortDescription>
+        <value>Groups</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Latest_Group_Activity</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Group Activity</shortDescription>
+        <value>Latest Group Activity</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_My_Groups</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>My Groups</shortDescription>
+        <value>My Groups</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_New_Group</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Group</shortDescription>
+        <value>New Group</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Number_Of_Members</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Number Of Members</shortDescription>
+        <value>Number Of Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Owner</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Owner</shortDescription>
+        <value>owner</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Page</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>page</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Recently_Viewed</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Recently Viewed</shortDescription>
+        <value>Recently Viewed</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Search</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Search_Groups</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Groups</shortDescription>
+        <value>Search Groups</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_Sort_By</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort By</shortDescription>
+        <value>Sort By</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_authorBy</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Authored by</shortDescription>
+        <value>by</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_groupName</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Group name label</shortDescription>
+        <value>Group:</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_groupType</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>group type post fix</shortDescription>
+        <value>group</value>
+    </labels>
+    <labels>
+        <fullName>ss_grp_label_lastActive</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>last activity</shortDescription>
+        <value>Last active</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_Knowledgeable_about</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Knowledgeable about</shortDescription>
+        <value>Knowledgeable about</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_batch_filter_body</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email body</shortDescription>
+        <value>Batch process completed for Members filter: {0}.
+Processed {1} batches, {2} job items.
+Total errors: {3}
+Total entries added: {4}</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_batch_filter_subject</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email subject</shortDescription>
+        <value>Batch process completed for Members {0} filter:</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_batch_fromEmail_name</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>From email name</shortDescription>
+        <value>Members Filter Batch Processing</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Follow</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Follow</shortDescription>
+        <value>Follow</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Following</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Following</shortDescription>
+        <value>Following</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Leave</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Leave group</shortDescription>
+        <value>Leave</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Member</fullName>
+        <categories>7S Groups</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>group member</shortDescription>
+        <value>Member</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Next</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next button label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Previous</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous button label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_Unfollow</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Un follow</shortDescription>
+        <value>Unfollow</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_button_clearAll</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear all</shortDescription>
+        <value>Clear All</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_clearAll</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear all</shortDescription>
+        <value>Clear All</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Explore_Featured_Members</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Explore Featured Members</shortDescription>
+        <value>Explore Featured Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Featured_Description</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Featured_Description</shortDescription>
+        <value>Find out more about our Featured Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Followers</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Followers</shortDescription>
+        <value>Followers</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Likes</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Likes</shortDescription>
+        <value>Likes</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Members</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Members</shortDescription>
+        <value>Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Members_I_Follow</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Members I Follow</shortDescription>
+        <value>Members I Follow</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Page</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Page label</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Posts</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Posts</shortDescription>
+        <value>Posts</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Search_Members</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Members</shortDescription>
+        <value>Search Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Search_lastName</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Members by last name</shortDescription>
+        <value>Search by Last name, First name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Sort_by_First_Name</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by First Name</shortDescription>
+        <value>Sort by First Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Sort_by_Last_Name</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by Last Name</shortDescription>
+        <value>Sort by Last Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Sort_by_joinedNewest</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by date joined - newest</shortDescription>
+        <value>Date joined newest</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_Sort_by_joinedOldest</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by date joined - oldest</shortDescription>
+        <value>Date joined oldest</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_allMembers</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All member label</shortDescription>
+        <value>All Members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_placeholderAccount</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account name type ahead placeholder</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_placeholderCity</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>City type ahead placeholder</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_placeholderCountry</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Country type ahead placeholder</shortDescription>
+        <value>Country</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_placeholderState</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>State type ahead placeholder</shortDescription>
+        <value>State</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_placeholderTitle</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title type ahead</shortDescription>
+        <value>Title</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_promptAccount</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account name type ahead placeholder</shortDescription>
+        <value>Account name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_promptCity</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>City type ahead placeholder</shortDescription>
+        <value>City name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchAccounts</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search by account</shortDescription>
+        <value>Filter by Account</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchCities</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search by city</shortDescription>
+        <value>Filter by City</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchCountries</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search by country</shortDescription>
+        <value>Filter by Country</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchStates</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search by state</shortDescription>
+        <value>Select From Filtered State</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchTitle</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by title</shortDescription>
+        <value>Filter by title</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_searchTopics</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter members by topic</shortDescription>
+        <value>Area of expertise</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_typeAheadAccount</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account name type ahead</shortDescription>
+        <value>Search account name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_typeAheadCity</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>City type ahead</shortDescription>
+        <value>Search city name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_typeAheadCountry</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Country type ahead</shortDescription>
+        <value>Search country name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_typeAheadState</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>State type ahead</shortDescription>
+        <value>Begin Typing State Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_label_typeAheadTitle</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title type ahead</shortDescription>
+        <value>Search titles</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_selectAll</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select all</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_sortMembers</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort embers</shortDescription>
+        <value>Sort members</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_text_selectAll</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select all</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>ss_mbr_tooltip_searchMembers</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search Members</shortDescription>
+        <value>Enter name, email or phone number to search members</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_buttonClear</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear date picker</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_Delete</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Delete button</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_Edit</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_Follow</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Follow</shortDescription>
+        <value>Follow</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_Following</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Following</shortDescription>
+        <value>Following</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_Unfollow</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Un follow</shortDescription>
+        <value>Unfollow</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_next</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next button label</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_button_previous</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous button label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_labelArchiveDate</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Archive date</shortDescription>
+        <value>Article will be archived on</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_labelArchiveDateDesc</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Archive date description</shortDescription>
+        <value>The date this item will be removed from the news listing and be available only via search.</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_labelGroupDesc</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Group description</shortDescription>
+        <value>If a group is selected, this item will appear on the group detail page.</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_NewInvalidInput</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Input required form fields</shortDescription>
+        <value>Input required: form fields</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_authorBy</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Authored by</shortDescription>
+        <value>by</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_endDate</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date filter End date</shortDescription>
+        <value>To Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_filterAuthor</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by author label</shortDescription>
+        <value>Author</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_groupName</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Group name label</shortDescription>
+        <value>Group:</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_page</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Page label</shortDescription>
+        <value>Page</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_privateGroup</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make this news item private to group members only</shortDescription>
+        <value>Private</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_publishDate</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Publish date</shortDescription>
+        <value>Article will be published on</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_publishDateDesc</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Publish date description</shortDescription>
+        <value>The date this new item will be published to the community.</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_schedulePublication</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Publish section</shortDescription>
+        <value>Schedule Publication</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_search</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search label</shortDescription>
+        <value>Search news titles</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_sortBy</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by label</shortDescription>
+        <value>Sort items</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_sortMostRecent</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by most recent - change as needed</shortDescription>
+        <value>Most recent</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_sortOldestFirst</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by oldest - change as needed</shortDescription>
+        <value>Oldest first</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_label_startDate</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date filter Start date</shortDescription>
+        <value>From Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_list_Empty</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>News list empty message</shortDescription>
+        <value>No items found</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_placeholder_filterAuthor</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by author placeholder</shortDescription>
+        <value>Filter by Author</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_placeholder_filterTopic</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by topic placeholder</shortDescription>
+        <value>Filter by Topics</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_placeholder_search</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search placeholder</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_title_newItem</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tooltip for new button</shortDescription>
+        <value>Add a new news item</value>
+    </labels>
+    <labels>
+        <fullName>ss_nws_tooltip_privateGroup</fullName>
+        <categories>7S News</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Tooltip for news item private to group members only</shortDescription>
+        <value>If a group is selected, this item will only appear on the group detail page.</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_addToCart</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button add to cart</shortDescription>
+        <value>Add to Cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_addedToCart</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button label added to cart</shortDescription>
+        <value>Added....</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_cart</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cart button</shortDescription>
+        <value>Complete Checkout</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_checkout</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>check out cart items</shortDescription>
+        <value>Checkout</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_placeOrder</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Place order for cart items</shortDescription>
+        <value>Place Order</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_schedule</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button add payment schedule</shortDescription>
+        <value>Schedule Payment</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_scheduled</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button label added to cart</shortDescription>
+        <value>Scheduled....</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_suggestProduct</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button suggest product</shortDescription>
+        <value>Suggest</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_button_suggestedProduct</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button suggested product</shortDescription>
+        <value>Suggested...</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cartSummary_agreement</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Checkout terms and agreement</shortDescription>
+        <value>By continuing to Checkout, you are agreeing to our Terms of Use and Privacy Policy (https://www.towson.edu/privacy.html)</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_button_return</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Return to shopping hyperlink text</shortDescription>
+        <value>Return to catalog</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_error_accountId</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Default account ID missing for internal users</shortDescription>
+        <value>“Please let your system administrator know that a default account must be set.</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_header_title</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cart header</shortDescription>
+        <value>My Cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_label_empty</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Empty cart</shortDescription>
+        <value>Your cart is empty. Explore the product catalog and click the Add to Cart button to have
+            products appear in your cart.</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_label_remove</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remove item from cart</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_code</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - code</shortDescription>
+        <value>Code</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_image</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - image</shortDescription>
+        <value>Image</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_item</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - item</shortDescription>
+        <value>Item</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_points</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - points</shortDescription>
+        <value>Points</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_quantity</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - quantity</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_totalPoints</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - total points</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_totalPrice</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - total price</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_listHeader_unitPrice</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List header - unit price</shortDescription>
+        <value>Price</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_summary_header</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cart summary header</shortDescription>
+        <value>Cart Summary</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_summary_text1</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cart summary description</shortDescription>
+        <value>Your cart summary is listed below.</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_summary_text2</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cart summary description</shortDescription>
+        <value>Proceed to checkout when ready!</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_messageAdded</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast message when added to cart, where {0} is quantity, {1} name</shortDescription>
+        <value>{0} {1} added to cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_messageClear</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast message title when clearing the cart</shortDescription>
+        <value>Cleared</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_messageCleared</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast message title when cart is cleared</shortDescription>
+        <value>Cleared all items from the cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_messageDeleted</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast message when deleted from cart, where {1} name</shortDescription>
+        <value>{0} removed from cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_title</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast notification title when added to cart</shortDescription>
+        <value>Added to shopping cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_toast_titleDeleted</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast message title when deleted from cart</shortDescription>
+        <value>Deleted</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_tooltip_remove</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Remove item from cart tooltip</shortDescription>
+        <value>Remove this item from the cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_tooltip_removeAll</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear all items from cart tooltip</shortDescription>
+        <value>Clear cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_cart_tooltip_return</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Return to catalog button tooltip</shortDescription>
+        <value>Return to catalog</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_labelTest</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc labelTest</shortDescription>
+        <value>Test Label</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_cartSummary_estimatedShipping</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cart summary - estimated shipping</shortDescription>
+        <value>Estimated Shipping:</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_cartSummary_estimatedTax</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cart summary - estimated tax</shortDescription>
+        <value>Estimated Tax:</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_cartSummary_estimatedTotal</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cart summary - estimated total</shortDescription>
+        <value>Estimated Total:</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_cartSummary_subTotal</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>cart summary - subtotal</shortDescription>
+        <value>Cart Subtotal:</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_familyList</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Product family list browse label- {0} family name</shortDescription>
+        <value>Browse {0}</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_final_payment_date</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ss Schedule Final Payment Date</shortDescription>
+        <value>Final Payment Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_frequency</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Schedule Frequency label</shortDescription>
+        <value>Frequency</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_itemQuantity</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>number of items to add to cart</shortDescription>
+        <value>Quantity:</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_next_payment_date</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ss Schedule Next Payment Date</shortDescription>
+        <value>Next Payment Date</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_placedOrder</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Placed order for cart items {0} - order Id</shortDescription>
+        <value>Successfully  placed order number: {0}</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_points</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>points</shortDescription>
+        <value>Points</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_price</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>price</shortDescription>
+        <value>Price</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_productCode</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>product code</shortDescription>
+        <value>Code</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_productFamily</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>product family</shortDescription>
+        <value>Product Family</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_searchProductCode</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc search product code</shortDescription>
+        <value>Search by product code</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_searchProductFamily</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc search Product Family</shortDescription>
+        <value>Filter by product family</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_sortByProductCode</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>sort by product code</shortDescription>
+        <value>Product Code</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_sortByProductFamily</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>sort by product family</shortDescription>
+        <value>Product Family</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_sortByProductName</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>sort by product name</shortDescription>
+        <value>Product Name</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_sortByProductPrice</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>sort by unit price</shortDescription>
+        <value>Product Price</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_sortProducts</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc label sort products</shortDescription>
+        <value>Sort products</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_totalItems</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>pagination control total items label</shortDescription>
+        <value>items</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_label_unit_price</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Unit Price label</shortDescription>
+        <value>Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_listTitle</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>List Title</shortDescription>
+        <value>Product List</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_next</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_previous</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ss pc previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_selectAll</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select all</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_subLabel_cartSummary_estimatedShipping</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimated shipping sub label</shortDescription>
+        <value>Calculated during checkout</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_subLabel_cartSummary_estimatedTax</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Estimated tax sub label</shortDescription>
+        <value>Calculated during checkout</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_suggest_toast_message</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Toast on suggest a product, where {0} is contact name, {1} product name</shortDescription>
+        <value>Email sent to {0} suggesting {1}</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_tooltip_addToCart</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button add to cart tooltip</shortDescription>
+        <value>Add this product to the shopping cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_tooltip_schedule</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>button schedule tooltip</shortDescription>
+        <value>Add this product to a payment schedule</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_tooltip_showCart</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cart button tooltip</shortDescription>
+        <value>Go to my cart</value>
+    </labels>
+    <labels>
+        <fullName>ss_pc_tooltip_suggestProduct</fullName>
+        <categories>7S Product Catalog</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>button suggest product tooltip</shortDescription>
+        <value>Suggest this product to the current user</value>
+    </labels>
+    <labels>
+        <fullName>ss_ss_mbr_label_typeAheadAccount</fullName>
+        <categories>7S Members</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account name type ahead</shortDescription>
+        <value>Search account name</value>
+    </labels>
+    <labels>
+        <fullName>tu_grp_label_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>TU_Wrong_Number_of_Tickets_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wrong number of tickets message</shortDescription>
+        <value>You have the wrong number of tickets in your cart please correct.</value>
+    </labels>
+    <labels>
+        <fullName>TU_Number_of_Tickets_Needed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Number of tickets needed</shortDescription>
+        <value>The number of tickets you needed is </value>
+    </labels>
+    <labels>
+        <fullName>TU_Wrong_Number_of_Tickets_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Wrong number of tickets Button</shortDescription>
+        <value>Back to Products</value>
+    </labels>
+</CustomLabels>

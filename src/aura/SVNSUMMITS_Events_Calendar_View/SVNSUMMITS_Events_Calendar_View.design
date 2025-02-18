@@ -1,0 +1,18 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component >
+    <design:attribute name="debugMode"
+                      label="Debug Mode"
+                      description="Enable/disable debug mode"/>
+	<design:attribute name="categories"
+	                  label="Topics"
+	                  description="If you want to assign default topics use this attribute"/>
+    <design:attribute name="fromDate"
+                      label="From Date"
+                      description="Start Date"/>
+    <design:attribute name="toDate"
+                      label="To Date"
+                      description="End Date" />
+    <design:attribute name="allowFiltering"
+                      label="Allow Filtering"
+                      description="To Allow filtering or not"/>
+</design:component>

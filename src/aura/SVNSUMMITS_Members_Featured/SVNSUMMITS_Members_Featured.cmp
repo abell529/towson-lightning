@@ -1,0 +1,145 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component controller="SVNSUMMITS_MembersController"
+                access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+
+    <ltng:require styles="{!$Resource.SVNSUMMITS_LightningSlider + '/light-slider/light-slider/css/light-slider.css'}"
+                  scripts="{!join(',',
+						  $Resource.SVNSUMMITS_LightningSlider + '/light-slider/light-slider/js/jquery.min.js',
+						  $Resource.SVNSUMMITS_LightningSlider + '/light-slider/light-slider/js/lightslider.js'
+						  )}"
+                  afterScriptsLoaded="{!c.doInit}"/>
+
+	<aura:attribute name="membersListWrapper" type="SVNSUMMITS_WrapperMembers" access="global"/>
+	<aura:attribute name="sitePath" type="String" access="global"/>
+	<aura:attribute name="sitePrefix" type="String" default="/ccgroup" access="global"/>
+	<aura:attribute name="featuredTitle" type="String" default="{!$Label.c.ss_mbr_label_Explore_Featured_Members}" access="global"/>
+	<aura:attribute name="featuredDescription" type="String" access="global" default="{!$Label.c.ss_mbr_label_Featured_Description}"/>
+
+	<aura:attribute name="recordNickName1" type="String" access="global"/>
+	<aura:attribute name="recordNickName2" type="String" access="global"/>
+	<aura:attribute name="recordNickName3" type="String" access="global"/>
+	<aura:attribute name="recordNickName4" type="String" access="global"/>
+	<aura:attribute name="recordNickName5" type="String" access="global"/>
+	<aura:attribute name="recordNickName6" type="String" access="global"/>
+	<aura:attribute name="recordNickName7" type="String" access="global"/>
+	<aura:attribute name="recordNickName8" type="String" access="global"/>
+	<aura:attribute name="membersURL" type="String" default="/profile/" access="global"/>
+	<aura:attribute name="allMembersButtonText" type="String" default="{!$Label.c.ss_mbr_label_All_Members}" access="global"/>
+	<aura:attribute name="allMembersUrl" type="String" default="/members-list-view" access="global"/>
+
+	<aura:attribute name="displayTitle" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="displayPhone" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="clickToCall"  type="Boolean" default="false" access="global"/>
+	<aura:attribute name="displayEmail" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="customClass" type="String" default="testClass" access="global"/>
+    <aura:attribute name="customId" type="String" default="testId"  access="global"/>
+
+    <div class="{! 'featuredBox ' + v.customClass}" id="{!v.customId}">
+		<div class="slds-grid slds-wrap slds-grid--pull-padded">
+			<div class="slds-col--padded slds-size--1-of-1">
+				<div class="slds-text-heading--medium headerText">
+                    <div class="slds-text-heading--medium headerText">
+                        <aura:if isTrue="{!and(v.featuredTitle != '' , v.featuredTitle != 'none')}">
+                            <c:SVNSUMMITS_Members_SetLabelUtil text="{!v.featuredTitle}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.featuredTitle != 'none'}">
+										{!$Label.c.ss_mbr_label_Explore_Featured_Members}
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+				</div>
+			</div>
+			<div class="slds-form-element__control">
+				<aura:if isTrue="{!v.featuredDescription != 'none'}">
+					<div class="descriptiveText">
+
+                        <aura:if isTrue="{!and(v.featuredDescription != '' , v.featuredDescription != 'none')}">
+                            <c:SVNSUMMITS_Members_SetLabelUtil text="{!v.featuredDescription}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.featuredDescription != 'none'}">
+										{!$Label.c.ss_mbr_label_Featured_Description}
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+
+					</div>
+                </aura:if>
+			</div>
+		</div>
+		<div class="sliderCss">
+			<div class="well">
+				<div class="demo">
+					<div class="item">
+						<ul class="gallery content-slider list-unstyled clearfix lightSlider lSSlide lsGrab divslider responsive"
+						    id="responsive">
+							<aura:iteration items="{!v.membersListWrapper.membersList}" var="member">
+								<li>
+									<!-- TODO replace this with the new tile -->
+
+									<div id="u47" class="ax_paragraph">
+										<div class='image-container'>
+											<a href="{!v.sitePath +v.membersURL+member.Id}">
+												<img src="{!member.FullPhotoUrl}" class="memberImg"/>
+											</a>
+										</div>
+										<div id="u48" class="text">
+											<div class="para1 slds-text-heading--small slds-text-align--center">
+												<ui:outputURL class="para1Span"
+												              value="{!v.sitePath +v.membersURL+member.Id}"
+												              label="{!member.Name}"/>
+												<br/>
+											</div>
+											<div class="para3">
+                                                 <span class="para3Span slds-text-body--medium slds-text-align--center">
+                                                     <aura:if isTrue="{!v.displayTitle }">
+                                                         <aura:if isTrue="{!member.Title}">&nbsp;{!member.Title}
+	                                                         <br/></aura:if>
+                                                     </aura:if>
+                                                     <div class="para3SpanInner slds-text-body--regular slds-text-align--center">
+                                                         <aura:if isTrue="{!v.displayPhone }">
+															 <aura:if isTrue="{!member.Phone}">
+																 <aura:if isTrue="{!v.clickToCall}">
+																	    <a href="{! 'tel:' + if(v.member.Phone[0] == '+', '', '+') + member.Phone}">
+																			    {!if(v.member.Phone[0] == '+', '', '+') + member.Phone}
+																	    </a>
+																	 <aura:set attribute="else">
+																		 {!member.Phone}
+																	 </aura:set>
+																 </aura:if>
+	                                                         	<br/>
+															 </aura:if>
+														 </aura:if>
+
+                                                         <aura:if isTrue="{!v.displayEmail }">
+															 <aura:if isTrue="{!member.Email}"> {!member.Email}
+	                                                         	<br/>
+															 </aura:if>
+														 </aura:if>
+                                                     </div>
+                                                 </span>
+											</div>
+										</div>
+									</div>
+								</li>
+							</aura:iteration>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <a href="{!v.sitePath + v.allMembersUrl}" title="{!v.allMembersButtonText}">
+            <button class="slds-button slds-button--neutral  buttonText">
+                <aura:if isTrue="{!v.allMembersButtonText != ''}">
+                    <c:SVNSUMMITS_Members_SetLabelUtil text="{!v.allMembersButtonText}"/>
+                    <aura:set attribute="else">
+							{!$Label.c.ss_mbr_label_allMembers}
+                    </aura:set>
+                </aura:if>
+            </button>
+        </a>
+
+	</div>
+</aura:component>

@@ -1,0 +1,17 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+
+<!--
+ - Created by francoiskorb on 6/5/17.
+ -->
+
+<aura:component description="SVNSUMMITS_Events_Base"
+                controller="SVNSUMMITS_EventBaseController"
+                abstract="true"
+                extensible="true">
+
+	<ltng:require scripts="{!$Resource.svg4everybodyMod}"
+	              afterScriptsLoaded="{!c.doInit}"/>
+	<aura:registerEvent name="baseReady" type="c:SVNSUMMITS_Events_BaseReady"/>
+
+	{!v.body}
+</aura:component>

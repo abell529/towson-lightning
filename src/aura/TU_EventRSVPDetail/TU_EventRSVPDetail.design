@@ -1,0 +1,15 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/13/18.
+ -->
+
+<design:component label="Events Detail RSVP">
+    <design:attribute name="recordId" label="Record Id"
+                      default="{!recordId}"
+                      description="Set to {!recordId} to pass the page's record Id."/>
+    <design:attribute name="eventProductsUrl"
+                      label="Event Products URL"
+                      description="Specify the URL for paid events">
+    </design:attribute>
+
+</design:component>

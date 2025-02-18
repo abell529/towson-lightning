@@ -1,0 +1,43 @@
+/**
+ * Towson_Lightning - Generates the assets used for TU Connect
+ * @version 1.0.0
+ * @author 7Summits
+ *
+ * COMPILED FILE DO NOT DIRECTLY EDIT
+ */
+.THIS h1,
+.THIS h2,
+.THIS h3,
+.THIS h4,
+.THIS h5 {
+  font-family: Sabon LT W01 Roman, serif;
+  font-weight: 400;
+  color: #000;
+}
+.THIS h1 {
+  font-size: 54px;
+  letter-spacing: -1.62px;
+}
+.THIS h2 {
+  font-size: 38px;
+  letter-spacing: -1.14px;
+}
+.THIS h3 {
+  font-family: FrutigerLTW01-87ExtraBk, sans-serif;
+  font-size: 32px;
+  line-height: 30px;
+  letter-spacing: -1.6px;
+  text-transform: uppercase;
+}
+.THIS h4 {
+  font-family: FrutigerLTW01-67BoldCn, sans-serif;
+  font-size: 28px;
+}
+.THIS h5 {
+  font-family: FrutigerLTW01-45Light722105, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2.56px;
+  text-transform: uppercase;
+  color: #666;
+}

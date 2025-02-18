@@ -1,0 +1,8 @@
+/**
+ * Towson_Lightning - Generates the assets used for TU Connect
+ * @version 1.0.0
+ * @author 7Summits
+ *
+ * COMPILED FILE DO NOT DIRECTLY EDIT
+ */
+console.log("hi");

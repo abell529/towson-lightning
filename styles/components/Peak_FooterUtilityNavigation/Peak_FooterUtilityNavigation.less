@@ -1,0 +1,58 @@
+.THIS
+{
+    color: @white;
+    background: @black;
+
+    @import '../_base/components-common';
+
+    .slds-p-vertical--large
+    {
+        padding-top: 0;
+    }
+
+    .copyright
+    {
+        border-right: 1px solid @white;
+        @media screen and (max-width: 649px)
+        {
+            width: 100%;
+
+            border-right: none;
+        }
+        span
+        {
+            @media screen and (max-width: 479px)
+            {
+                display: none;
+            }
+        }
+    }
+    .slds-col--bump-left
+    {
+        @media screen and (max-width: 767px)
+        {
+            width: 100%;
+            margin-left: .75rem;
+        }
+    }
+    hr
+    {
+        margin: 0;
+        margin-bottom: @paddingLarge;
+    }
+
+    a
+    {
+        &:link,
+        &:visited
+        {
+            color: @white;
+        }
+
+        &:hover,
+        &:active
+        {
+            color: @white;
+        }
+    }
+}

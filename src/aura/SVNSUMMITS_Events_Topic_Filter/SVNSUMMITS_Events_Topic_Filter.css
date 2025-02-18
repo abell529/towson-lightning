@@ -1,0 +1,14 @@
+/* Copyright ©2016-2017 7Summits Inc. All rights reserved. */
+
+.THIS .toggleClass{
+    display:none;
+}
+.THIS .toggleClass1{
+    display:block;
+}
+.THIS .clearAlign{
+    float:right!important;
+}
+.THIS .topicPicklist{
+    width:100%;
+}

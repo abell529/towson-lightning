@@ -1,0 +1,215 @@
+@import '../../variables';
+.THIS
+{
+    // search section
+    .peak_knowledgeFilter__search
+    {
+        @searchFontSize: 1.625rem;
+
+
+        .slds-form-element
+        {
+            margin: 0;
+            padding: 0;
+
+            border: 0;
+            background: none;
+            > label
+            {
+                display: none;
+            }
+        }
+
+        input
+        {
+            font-size: @searchFontSize;
+            line-height: @searchFontSize;
+
+            padding: 1.125rem .625rem;
+
+            &::placeholder,
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder
+            {
+                font-size: @searchFontSize!important;
+            }
+        } // end  input
+
+        .slds-icon_container
+        {
+            right: 1.5rem;
+        }
+    } // end search
+
+    // filter options
+    .peak_knowledgeFilter__filter
+    {
+        label
+        {
+            display: none;
+        }
+
+        select
+        {
+            font-size: 1rem;
+
+            height: 2.5rem;
+        }
+    } // end filters
+
+    .peak_knowledgeFilter__pager
+    {
+        button
+        {
+            text-transform: uppercase;
+
+            &.pager-left
+            {
+                padding-right: 1.875rem;
+            }
+            &.pager-right
+            {
+                padding-left: 1.875rem;
+            }
+
+            .slds-icon_container
+            {
+                position: relative;
+                top: -1px;
+
+                svg
+                {
+                    fill: #fff;
+                }
+            }
+        } // end button
+    } // end pager
+
+    // results section
+    .peak_knowledgeFilter__results
+    {
+        position: relative;
+
+        min-height: 150px;
+
+        table
+        {
+            background: none;
+
+            @media (max-width: 48em)
+            {
+                border: 0;
+            }
+
+            thead
+            {
+                th
+                {
+                    font-size: .8125rem;
+
+                    padding-top: .375rem;
+                    padding-bottom: .375rem;
+
+                    // set width of first column
+                    &:first-child
+                    {
+                        width: 65%;
+                    }
+                } // th
+
+                @media (max-width: 48em)
+                {
+                    display: none;
+                }
+            } // table head
+
+            tbody tr
+            {
+                th
+                {
+                    font-weight: 700;
+                }
+
+                th,
+                td
+                {
+                    padding-top: 1rem;
+                    padding-bottom: 1.5rem;
+                    div
+                    {
+                        ul
+                        {
+                            flex-wrap: wrap;
+                            @media only screen and (max-width: @screen-sm-max)
+                            {
+                                -webkit-justify-content: flex-end;
+                                        justify-content: flex-end;
+                            }
+                        }
+                    }
+                } // end td/th
+
+                @media (max-width: 48em)
+                {
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: .625rem 0;
+
+                    border-top: 2px solid;
+
+                    th,
+                    td
+                    {
+                        display: flex;
+
+                        width: 100%;
+                        padding: .625rem 0;
+
+                        &:first-child
+                        {
+                            border-top: 0;
+                        }
+
+                        > div
+                        {
+                            font-size: .875rem;
+
+                            padding-left: .25rem;
+
+                            text-align: right;
+
+                            flex: 4;
+                        }
+
+                        &:before
+                        {
+                            font-size: .75rem;
+                            font-weight: 400;
+
+                            padding-right: .25rem;
+
+                            content: attr(data-label);
+                            text-transform: uppercase;
+
+                            flex: 2;
+                        } // end before
+                    } // end td/th
+                } // less than 768px
+            } // table body tr
+
+            &.isSearching
+            {
+                border-bottom: 0;
+            }
+        } // table
+
+        .peak_knowledgeFilter_topicsList
+        {
+            a
+            {
+                font-size: .75rem;
+            }
+        }
+    } // end results
+}

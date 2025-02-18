@@ -1,0 +1,80 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/12/18.
+ -->
+
+<aura:component description="TU_EventRSVPUpdate" extends="c:TU_EventRSVPBase" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+    <aura:handler name="init" action="{!c.initRSVPUpdate}" value="{!this}"/>
+    <aura:attribute type="String" name="rsvpConfirm" default="Confirmed" access="global" />
+    <aura:attribute type="String" name="rsvpPending" default="Pending" access="global" />
+    <aura:attribute type="String" name="rsvpWaitlist" default="Wait-listed" access="global" />
+    <aura:attribute type="String" name="rsvpCancelled" default="Cancelled" access="global" />
+    <aura:attribute type="String" name="rsvpRemoveWaitlist" default="WaitlistRemove" access="global" />
+    <aura:attribute type="String" name="rsvpInvited" default="Invited" access="global" />
+    <aura:attribute type="String" name="rsvpConfirmPayment" default="ConfirmPayment" access="global"/>
+    <aura:attribute type="String" name="rsvpPayment" default="Payment" access="global" />
+    <aura:attribute type="String" name="rsvpFull" default="Full" access="global" />
+    <aura:attribute name="eventProductsUrl" type="String"  default="/event-products"   access="global"/>
+
+    <aura:if isTrue="{!v.isInit}">
+        <lightning:layout verticalAlign="center" horizontalAlign="spread" multipleRows="true" class="slds-p-vertical_xx-large">
+            <lightning:layoutItem size="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <h4>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpPending}">
+                        {!$Label.c.TU_RSVP_Confirm_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpConfirmPayment}">
+                        {!$Label.c.TU_RSVP_Confirm_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpWaitlist}">
+                        {!$Label.c.TU_RSVP_Waitlist_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpCancelled}">
+                        {!$Label.c.TU_RSVP_Confirmed_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpInvited}">
+                        {!$Label.c.TU_RSVP_Invite_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpFull}">
+                        {!$Label.c.TU_RSVP_FULL_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpRemoveWaitlist}">
+                        {!$Label.c.TU_RSVP_Waitlist_Added_Intro}
+                    </aura:if>
+                    <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpPayment}">
+                        {!$Label.c.TU_RSVP_Payment_Required_Intro}
+                    </aura:if>
+                </h4>
+            </lightning:layoutItem>
+
+            <!--Display the Button based on the next response-->
+            <lightning:layoutItem size="6" mediumDeviceSize="12" smallDeviceSize="12">
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpPending}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Confirm}" label="{!$Label.c.TU_RSVP_Confirm}"  iconName="utility:adduser" iconPosition="right" variant="brand"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpConfirmPayment}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Confirm}" label="{!$Label.c.TU_RSVP_Confirm}"  iconName="utility:adduser" iconPosition="right" variant="brand"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpWaitlist}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Waitlist}" label="{!$Label.c.TU_RSVP_Waitlist}"  iconName="utility:adduser" iconPosition="right" variant="brand"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpCancelled}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Cancel}" label="{!$Label.c.TU_RSVP_Cancel}"  iconName="utility:resource_absence" iconPosition="right" variant="destructive"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpInvited}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Invited}" label="{!$Label.c.TU_RSVP_Invited}"  iconName="utility:adduser" iconPosition="right" variant="brand"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpFull}">
+                    <lightning:button disabled="true" value="{!$Label.c.TU_Event_FULL}" label="{!$Label.c.TU_Event_FULL}"  iconName="utility:resource_absence" iconPosition="right" variant="destructive"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpRemoveWaitlist}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Waitlist_Remove}" label="{!$Label.c.TU_RSVP_Cancel}"  iconName="utility:resource_absence" iconPosition="right" variant="destructive"/>
+                </aura:if>
+                <aura:if isTrue="{!v.peakResponseRSVP.results[0].Response__c == v.rsvpPayment}">
+                    <lightning:button onclick="{!c.updateRSVP}" value="{!$Label.c.TU_RSVP_Payment_Required}" label="{!$Label.c.TU_RSVP_Payment_Required}"  iconName="utility:resource_absence" iconPosition="right" variant="brand"/>
+                </aura:if>
+            </lightning:layoutItem>
+
+        </lightning:layout>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,32 @@
+.THIS
+{
+    font-style: italic;
+    // font-size: @h3Size;
+
+    color: @white;
+    background: @black;
+
+    @import '../_base/components-common';
+
+    .slds-p-vertical--large
+    {
+        margin-bottom: 0;
+    }
+
+    a
+    {
+        &:link,
+        &:visited
+        {
+            font-weight: bold;
+
+            color: @white;
+        }
+
+        &:hover,
+        &:active
+        {
+            color: @white;
+        }
+    }
+}

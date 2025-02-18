@@ -1,0 +1,117 @@
+/* Copyright ©2016-2017 7Summits Inc. All rights reserved. */
+.THIS .descriptiveText{
+    padding: 15px 15px 15px 12px!important;
+    font-size: 16px!important;
+    line-height: 20px!important;
+}
+.THIS.featuredBox{
+    box-shadow: 0 0 2px #A7B8D1;
+    border-radius: 2px;
+    padding: 2% 1% 1% 2%!important;
+}
+.THIS .memberImg{
+    width: 100px!important;
+    max-width: none;
+    height: auto;
+}
+.THIS .ul{
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+.THIS .demo .item{
+    margin-bottom: 60px;
+}
+.THIS .content-slider li{
+    text-align: center;
+}
+.THIS .content-slider h3 {
+    margin: 0;
+    padding: 70px 0;
+}
+.THIS .demo{
+    width: 100%;
+}
+.THIS .clockSymbol{
+    width:11px;
+    margin: 5px;
+}
+.THIS .sliderCss{
+    margin: 30px 10px 0px 0px!important;
+}
+.THIS .buttonText{
+    color:grey!important;
+    width: 150px;
+}
+.THIS .para1{
+    font-size:18px;
+    width: 50%;
+    margin-left: 25%;
+    line-height: 25px;
+    margin-top: 7px;
+}
+.THIS .para1Span{
+    font-weight:400;
+    font-size:18px;
+    color:#333333;
+    line-height:25px;
+    word-break: break-word!important; /*to control text overflow - 170516*/
+    padding:1000px 0px 10px 0px!important;
+}
+.THIS .para3SpanInner{
+    word-break: break-word!important; /*to control text overflow - 170516*/
+    padding:10px 0px 10px 0px!important;
+}
+
+.THIS .para2{
+    font-size:12px;
+}
+.THIS .para2Span{
+    font-family:'FontAwesome';
+    font-weight:200;
+    font-size: 14px;
+}
+.THIS .para2Span2{
+    font-weight:200;
+    font-size:12px;
+}
+.THIS .para3{
+    font-size:12px;
+    /*padding-left: 10px;*/
+    padding:10px 10px 50px 0px!important;
+
+}
+
+.THIS .para3Allign{
+    font-size:12px;
+    padding:10px 10px 50px 0px!important;
+    text-align: left;
+}
+.THIS .para3Span{
+    font-weight:300;
+    font-size:12px;
+    padding-top:10px;
+
+}
+.THIS .headerText{
+    font-size: 24px!important;
+}
+.THIS .divslider{
+   height: auto!important;
+}
+
+.THIS .imagePic{
+	padding: 0px 20px 0px 0px;
+}
+.THIS .nameFont{
+    font-size:24px;
+    color:#333333;
+    line-height:25px;
+    font-weight: 400;
+    word-break: break-word!important; /*to control text overflow - 170516*/
+}
+.THIS .image-container {
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+}

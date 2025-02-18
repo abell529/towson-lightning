@@ -1,0 +1,33 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component label="7S Events Featured">
+	<design:attribute name="debugMode"
+	                  label="Debug Mode"
+	                  description="Enable/disable debug mode"/>
+	<design:attribute name="bandText"
+	                  label="Band Text"
+	                  description="Band Text"/>
+	<design:attribute name="recordId1"
+	                  label="RecordId 1"
+	                  description="RecordId for record 1"/>
+	<design:attribute name="recordId2"
+	                  label="RecordId 2"
+	                  description="RecordId for record 2"/>
+	<design:attribute name="recordId3"
+	                  label="RecordId 3"
+	                  description="RecordId for record 3"/>
+	<design:attribute name="allEventsButtonText"
+	                  label="All Events button text"
+	                  description="Label for All Event Button"/>
+	<design:attribute name="allEventsUrl"
+	                  label="All Events button Url"
+	                  description="Url to redirect "/>
+	<design:attribute name="addNewEventButtonText"
+	                  label="Add new event button text"
+	                  description="Add new event button label"/>
+	<design:attribute name="addNewEventUrl"
+	                  label="Add new event button url"
+	                  description="Add new event button url"/>
+	<design:attribute name="limitToSpecificGroups"
+	                  label="Enable Limit to Specific Groups?"
+	                  description="Check to limit to specified groups only"/>
+</design:component>

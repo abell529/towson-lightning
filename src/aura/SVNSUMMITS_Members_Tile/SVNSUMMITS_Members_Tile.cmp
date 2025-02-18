@@ -1,0 +1,281 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="member" type="object" access="global"/>
+	<aura:attribute name="currentUser" type="String" access="public"/>
+
+	<aura:attribute name="displayTitle" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="displayPhone" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="clickToCall"  type="Boolean" default="false" access="global"/>
+	<aura:attribute name="displayEmail" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="displayKnowledge" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="displayFollowButton" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="displayChatterStats" type="Boolean" default="true" access="global"/>
+
+	<aura:registerEvent name="followEvent" type="c:SVNSUMMITS_Members_Follow_Event"/>
+
+	<lightning:layout multipleRows="true"
+	                  verticalAlign="center"
+	                  horizontalAlign="center">
+		<lightning:layoutItem size="12"
+		                      class="slds-box">
+
+			<lightning:layout multipleRows="true"
+			                  verticalAlign="center"
+			                  horizontalAlign="center">
+
+				<!-- MEMBER INFO -->
+				<lightning:layoutItem size="12"
+				                      class="slds-p-top--medium slds-p-bottom--medium slds-align--absolute-center">
+					<a onclick="{!c.goToRecord}"
+					   href="javascript:void(0)"
+					   data-id="{!v.member.Id}">
+						<!--<lightning:avatar src="{!v.member.FullPhotoUrl}"-->
+						                  <!--alternativeText="member"-->
+						                  <!--class="slds-align-top"-->
+						                  <!--fallbackIconName="standard:account"-->
+						                  <!--variant="circle"-->
+						                  <!--size="large"/>-->
+						<span class="slds-avatar slds-avatar_large slds-align-top slds-avatar_circle">
+							<img src="{!v.member.MediumPhotoUrl}" alt="{!v.member.Name + ' Photo'}"/>
+						</span>
+					</a>
+				</lightning:layoutItem>
+
+				<!-- NAME -->
+				<lightning:layoutItem size="12"
+				                      class="slds-align--absolute-center slds-text-heading--small">
+					<a onclick="{!c.goToRecord}"
+					   href="javascript:void(0)"
+					   data-id="{!v.member.Id}">
+							{!v.member.Name}
+					</a>
+				</lightning:layoutItem>
+
+				<!-- TITLE -->
+				<aura:if isTrue="{!v.displayTitle}">
+					<lightning:layoutItem size="12"
+					                      class="slds-p-around--x-small  slds-text-body--small slds-align--absolute-center slds-p-bottom--medium">
+						<aura:if isTrue="{!v.member.Title}">
+						{!v.member.Title}
+							<aura:set attribute="else">
+								&nbsp;
+							</aura:set>
+						</aura:if>
+					</lightning:layoutItem>
+				</aura:if>
+
+				<!-- PHONE -->
+				<aura:if isTrue="{!v.displayPhone}">
+					<lightning:layoutItem size="12"
+					                      class="slds-p-around--xxx-small  slds-text-body--small slds-align--absolute-center">
+						<aura:if isTrue="{!v.member.Phone}">
+							<aura:if isTrue="{!v.clickToCall}">
+									<a href="{! 'tel:' + if(v.member.Phone[0] == '+', '', '+') + v.member.Phone}">
+											{!if(v.member.Phone[0] == '+', '', '+') + v.member.Phone}
+									</a>
+								<aura:set attribute="else">
+									{!v.member.Phone}
+								</aura:set>
+							</aura:if>
+							<aura:set attribute="else">
+								&nbsp;
+							</aura:set>
+						</aura:if>
+					</lightning:layoutItem>
+				</aura:if>
+
+				<!-- EMAIL -->
+				<aura:if isTrue="{!v.displayEmail}">
+					<lightning:layoutItem size="12"
+					                      class="slds-p-around--xxx-small  slds-text-body--small slds-align--absolute-center slds-cell-wrap">
+						<aura:if isTrue="{!v.member.Email}">
+							<ui:outputEmail value="{!v.member.Email}">
+									{!v.member.Email}
+							</ui:outputEmail>
+							<aura:set attribute="else">
+								&nbsp;
+							</aura:set>
+						</aura:if>
+					</lightning:layoutItem>
+				</aura:if>
+
+				<!-- KNOWLEDGEABLE -->
+				<aura:if isTrue="{!v.displayKnowledge}">
+					<aura:if isTrue="{!v.member.strKnowledgeTopics}">
+						<lightning:layoutItem size="12"
+						                      class="slds-p-top--medium slds-align--absolute-center slds-text-body_small slds-text-color--weak">
+								{!$Label.c.ss_mbr_Knowledgeable_about}
+						</lightning:layoutItem>
+
+						<lightning:layoutItem size="12"
+						                      class="slds-align--absolute-center slds-p-bottom--x-small">
+							<aura:if isTrue="{!v.member.strKnowledgeTopics}">
+								<a onclick="{!c.goToRecord}"
+								   href="javascript:void(0)"
+								   data-id="{!v.member.strKnowledgeTopicId}">
+										{!v.member.strKnowledgeTopics}
+								</a>
+							</aura:if>
+
+							<aura:if isTrue="{!v.member.strKnowledgeTopics1}">
+								|
+								<a onclick="{!c.goToRecord}"
+								   href="javascript:void(0)"
+								   data-id="{!v.member.strKnowledgeTopicId1}">
+										{!v.member.strKnowledgeTopics1}
+								</a>
+							</aura:if>
+						</lightning:layoutItem>
+						<aura:set attribute="else">
+							<lightning:layoutItem size="12"
+							                      class="slds-p-top--medium slds-p-bottom--x-small slds-text-body_small slds-text-color--weak">
+								&nbsp;
+							</lightning:layoutItem>
+							<lightning:layoutItem size="12"
+							                      class="slds-align--absolute-center">
+								&nbsp;
+							</lightning:layoutItem>
+						</aura:set>
+					</aura:if>
+				</aura:if>
+			</lightning:layout>
+
+			<!-- FOLLOW BUTTON -->
+			<aura:if isTrue="{!v.displayFollowButton}">
+				<lightning:layoutItem size="12"
+				                      class="slds-p-bottom--small slds-align--absolute-center">
+					<aura:if isTrue="{!v.member.Id != v.currentUser}">
+						<lightning:buttonStateful labelWhenOff="{!$Label.c.ss_mbr_button_Follow}"
+								labelWhenOn="{!$Label.c.ss_mbr_button_Following}"
+								labelWhenHover="{!$Label.c.ss_mbr_button_Unfollow}"
+								iconNameWhenOff="utility:add"
+								iconNameWhenOn="utility:check"
+								iconNameWhenHover="utility:close"
+								state="{!v.member.isFollowing}"
+								onclick="{!c.handleFollowClick}"/>
+						<aura:set attribute="else">
+					<span class="slds-p-top--small noFollowButton">
+					&nbsp;
+					</span>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+			</aura:if>
+
+			<!-- CHATTER STATS -->
+			<aura:if isTrue="{!v.displayChatterStats}">
+				<lightning:layoutItem size="12"
+				                      smallDeviceSize="12"
+				                      mediumDeviceSize="12"
+				                      largeDeviceSize="12">
+
+					<lightning:layout verticalAlign="center"
+					                  horizontalAlign="center"
+					                  multipleRows="true"
+					                  pullToBoundary="medium"
+					                  class="slds-p-top--small slds-border--top">
+
+						<!-- Followers -->
+						<lightning:layoutItem size="12"
+						                      smallDeviceSize="10"
+						                      mediumDeviceSize="4"
+						                      largeDeviceSize="3"
+						                      class="slds-text-body--small">
+							<lightning:layout multipleRows="true"
+							                  verticalAlign="end"
+							                  horizontalAlign="center">
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center">
+										{!$Label.c.ss_mbr_label_Followers}
+								</lightning:layoutItem>
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center slds-text-color_weak">
+									<aura:if isTrue="{! !v.member.intNumberOfFollowers}">
+										0
+									</aura:if>
+									<aura:if isTrue="{!v.member.intNumberOfFollowers}">
+											{!v.member.intNumberOfFollowers}
+									</aura:if>
+								</lightning:layoutItem>
+							</lightning:layout>
+						</lightning:layoutItem>
+
+						<!-- Likes -->
+						<lightning:layoutItem size="12"
+						                      smallDeviceSize="10"
+						                      mediumDeviceSize="4"
+						                      largeDeviceSize="3"
+						                      class="slds-text-body--small">
+							<lightning:layout multipleRows="true"
+							                  verticalAlign="end"
+							                  horizontalAlign="center">
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center">
+										{!$Label.c.ss_mbr_label_Likes}
+								</lightning:layoutItem>
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center slds-text-color_weak">
+									<aura:if isTrue="{! !v.member.intLikeReceived}">
+										0
+									</aura:if>
+									<aura:if isTrue="{! v.member.intLikeReceived}">
+											{!v.member.intLikeReceived}
+									</aura:if>
+								</lightning:layoutItem>
+							</lightning:layout>
+						</lightning:layoutItem>
+
+						<!-- Posts -->
+						<lightning:layoutItem size="12"
+						                      smallDeviceSize="10"
+						                      mediumDeviceSize="4"
+						                      largeDeviceSize="3"
+						                      class="slds-text-body--small">
+							<lightning:layout multipleRows="true"
+							                  verticalAlign="end"
+							                  horizontalAlign="center">
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center">
+										{!$Label.c.ss_mbr_label_Posts}
+								</lightning:layoutItem>
+								<lightning:layoutItem size="12"
+								                      smallDeviceSize="12"
+								                      mediumDeviceSize="12"
+								                      largeDeviceSize="12"
+								                      class="slds-align_absolute-center slds-text-color_weak">
+									<aura:if isTrue="{! !v.member.intPostsMade}">
+										0
+									</aura:if>
+									<aura:if isTrue="{!v.member.intPostsMade}">
+											{!v.member.intPostsMade}
+									</aura:if>
+								</lightning:layoutItem>
+							</lightning:layout>
+
+						</lightning:layoutItem>
+
+					</lightning:layout>
+
+				</lightning:layoutItem>
+			</aura:if>
+		</lightning:layoutItem>
+
+	</lightning:layout>
+</aura:component>

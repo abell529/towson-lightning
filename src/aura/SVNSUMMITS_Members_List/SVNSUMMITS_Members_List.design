@@ -1,0 +1,55 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component label="7S Members List">
+	<design:attribute name="numberOfMembers"
+	                  label="Number of Members to Display"
+	                  description="Number of members records to display on the page (looks best in 3's)."/>
+	<design:attribute name="numberOfTiles"
+	                  label="Number of tiles to display across"
+	                  description="Number of tiles to display across the page"
+	                  dataSource="1,2,3,5"/>
+	<design:attribute name="displayTitle"
+	                  label="Display Member Title"
+	                  description="Check box for enable and disable display of user title "
+	                  default="true"/>
+	<design:attribute name="displayPhone"
+	                  label="Display Member Phone Number"
+	                  description="Check box for enable and disable display of user Phone Number "
+	                  default="true"/>
+	<design:attribute name="clickToCall"
+	                  label="Enable click-to-call"
+	                  description="If enabled, the user can click on the phone number to launch the Phone app on the device"/>
+	<design:attribute name="displayEmail"
+	                  label="Display Member Email Address"
+	                  description="Check box for enable and disable display of user Email Address "
+	                  default="true"/>
+	<design:attribute name="displayKnowledge"
+	                  label="Display Member Knowledge"
+	                  description="Check box for enable and disable display of Member Knowledge "
+	                  default="true"/>
+	<design:attribute name="displayFollowButton"
+	                  label="Display follow button"
+	                  description="Enable the follow/un-follow button on the user tile"
+	                  default="true"/>
+	<design:attribute name="displayChatterStats"
+	                  label="Display Member chatter stats"
+	                  description="Display chatter statistics for the user"/>
+	<design:attribute name="initialLoad"
+	                  label="Load member list on startup"
+	                  description="Load members on page load"/>
+
+	<design:attribute name="hideInternal"
+	                  label="Hide internal users"
+	                  description="Hide internal members (standard SF license) from the community"/>
+	<design:attribute name="excludedMembers"
+	                  Label="Excluded Member IDs"
+	                  description="Comma delimited list of member ids to exclude from the list"/>
+
+	<design:attribute name="showPrevNextTop"
+	                  label="Show pagination at Top"
+	                  description="Show the prev/next buttons at the top of the list"
+	                  default="false"/>
+	<design:attribute name="showPrevNextBottom"
+	                  label="Show pagination at Bottom"
+	                  description="Show the prev/next buttons at the bottom of the list"
+	                  default="false"/>
+</design:component>

@@ -1,0 +1,15 @@
+/* Copyright ©2016-2017 7Summits Inc. All rights reserved. */
+.THIS{
+    border: token(borderWidthThin) solid token(colorBorder);
+    border-top:0;
+    margin:-36px 0 0 0;
+    padding:20px 15px 0 15px;
+}
+
+.THIS .field{
+    margin-bottom:20px;
+}
+
+.THIS .field .slds-button-group{
+    float:right;
+}

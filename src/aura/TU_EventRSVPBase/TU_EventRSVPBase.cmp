@@ -1,0 +1,21 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/12/18.
+ -->
+
+<aura:component description="TU_EventRSVPBase" extensible="true" extends="c:Peak_Base" controller="TU_EventRSVPController">
+
+    <aura:attribute type="List" name="rsvpList"/>
+    <aura:attribute type="Peak_Response" name="peakResponseEventRSVPs"/>
+    <aura:attribute type="Peak_Response" name="peakResponseRSVP"/>
+    <aura:attribute type="Peak_Response" name="status"/>
+    <aura:attribute type="Boolean" name="isInit" default="false"/>
+    <aura:attribute type="Boolean" name="isLoading" default="false"/>
+
+    <aura:if isTrue="{!v.isLoading}">
+        <c:Peak_LoadingGif />
+    </aura:if>
+
+    {!v.body}
+
+</aura:component>

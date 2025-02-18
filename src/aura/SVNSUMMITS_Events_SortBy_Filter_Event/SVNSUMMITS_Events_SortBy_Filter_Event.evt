@@ -1,0 +1,6 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:event type="APPLICATION">
+    <aura:attribute name="sortBy" type="String"/>
+    <aura:attribute name="listViewMode" type="String" />
+    <aura:attribute name="sortByLabel" type="String"/>
+</aura:event>

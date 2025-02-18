@@ -1,0 +1,37 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/27/18.
+ -->
+
+<aura:component description="TU_FormAssemblyCompletion" extends="c:Peak_Base" access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+                controller="TU_FormAssemblyCompletionController">
+
+    <aura:attribute type="Boolean" name="isInit" default="false"/>
+    <aura:attribute name="variable"         type="String"  default="rsvp"/>
+    <aura:attribute name="eventProductsUrl" type="String"  default="/event-products"   access="global"/>
+    <aura:attribute name="eventUrl"         type="String"  default="/event/" access="global"/>
+    <aura:attribute name="errorUrl"         type="String"  default="/event-registration-error" access="global"/>
+    <aura:attribute name="nextURL"          type="String" access="global"/>
+    <aura:attribute type="Boolean" name="isLoading" default="false"/>
+    <aura:attribute type="Peak_Response" name="peakResponseRSVP"/>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+
+    <aura:if isTrue="{!v.isInit}">
+        <lightning:layout verticalAlign="center" horizontalAlign="spread" class="slds-p-vertical_xx-large">
+            <lightning:layoutItem>
+                <h4>
+                    {!$Label.c.TU_RSVP_Continue_Intro}
+                </h4>
+            </lightning:layoutItem>
+            <!--<lightning:layoutItem>-->
+                <!--<lightning:button onclick="{!c.continue}" value="{!$Label.c.TU_RSVP_Continue}"-->
+                                  <!--label="{!$Label.c.TU_RSVP_Continue}"  iconName="utility:adduser" iconPosition="right"-->
+                                  <!--variant="brand"/>-->
+            <!--</lightning:layoutItem>-->
+
+        </lightning:layout>
+    </aura:if>
+</aura:component>

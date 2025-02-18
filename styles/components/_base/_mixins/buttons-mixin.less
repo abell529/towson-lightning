@@ -1,0 +1,42 @@
+.btn()
+{
+    // Mixin written to override default SLDS button styles and still adhere to branding editor 
+    /*
+	slds-button--neutral
+	slds-button--brand
+	slds-button--inverse
+	*/
+    font-size: 100%;
+
+    padding: .75rem 2.25rem;
+
+    transition: all .25s;
+
+    border-radius: 0;
+
+    // Cannot change background of buttons at a global scale and still use branding editor!
+}
+
+.btn-specialty()
+{
+    font-size: 120%;
+    line-height: 120%;
+
+    padding: 1rem 1.25rem;
+
+    border: 4px solid @white;
+    background: none;
+
+    span
+    {
+        padding: 5px 0 1px 0;
+
+        border-top: 1px solid rgba(51, 51, 51, .2);
+        border-bottom: 1px solid rgba(51, 51, 51, .2);
+    }
+
+    &:hover
+    {
+        background: @white;
+    }
+}

@@ -1,0 +1,36 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by 7Summits - Joe Callin on 3/27/18.
+-->
+<design:component label="Towson Registration Form">
+
+    <design:attribute name="regConfirmUrl" />
+    <design:attribute name="newUserUrl" />
+
+    <design:attribute name="firstNamePlaceholder" label="First Name Placeholder"
+                      description="The Placeholder value for First Name"/>
+    <design:attribute name="lastNamePlaceholder" label="Last Name Placeholder"
+                      description="The Placeholder value for Last Name"/>
+    <design:attribute name="emailPlaceholder" label="Email Placeholder"
+                      description="The Placeholder value for Email"/>
+    <design:attribute name="gradYearPlaceholder" label="Graduation Year Placeholder"
+                      description="The Placeholder value for Graduation Year"/>
+    <design:attribute name="gradLastNamePlaceholder" label="Last Name at Graduation Placeholder"
+                      description="The Placeholder value for Last Name at Graduation"/>
+    <design:attribute name="tuIdPlaceholder" label="TU Id Placeholder"
+                      description="The Placeholder value for TU Id"/>
+    <design:attribute name="alumniIdPlaceholder" label="Alumni Id Placeholder"
+                      description="The Placeholder value for Alumni Id"/>
+
+    <design:attribute name="patternGradYear" label="Pattern for Graduation Year"
+                      description="Pattern for Graduation Year"/>
+    <design:attribute name="invalidPatternGradYear" label="Message for Invalid Pattern"
+                      description="Error message for the Pattern not matching"/>
+    <design:attribute name="minLengthGradYear" label="Min Length for Graduation Year"
+                      description="The Minimum Length for the Graduation Year"/>
+    <design:attribute name="maxLengthGradYear" label="Max Length for Graduation Year"
+                      description="The Maximum Length for the Graduation Year"/>
+
+    <design:attribute name="CustomClassName" label="Custom Class Name" description="Custom CSS class name. Usually remains blank." />
+    <design:attribute name="CustomIdName" label="Custom ID Name" description="Custom, distinct CSS ID name. Usually remains blank." />
+</design:component>

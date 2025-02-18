@@ -1,0 +1,35 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/24/18.
+ -->
+
+<aura:component description="ss_cart_paymentAsperato"
+                implements="forceCommunity:availableForAllPageTypes, flexipage:availableForAllPageTypes"
+                controller="sc_listController"
+                extends="c:ss_product_base"
+                access="global">
+
+    <ltng:require styles="{!join(',', $Resource.ss_product_catalog)}"/>
+
+    <aura:attribute name="asperatoURL"     type="String" />
+    <aura:attribute name="height"          type="String" default="1000" access="public"/>
+    <aura:attribute name="width"           type="String" default="500" access="public"/>
+    <aura:attribute name="paymentConfirmURL" type="String" default="/7s-payment-confirm" access="public"/>
+    <aura:attribute name="paymentCancelURL" type="String" default="/7s-payment-cancelled" access="public"/>
+    <aura:attribute name="paymentErrorURL" type="String" default="/7s-payment-error" access="public"/>
+    <aura:attribute name="loading" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:layout horizontalAlign="center">
+        <aura:if isTrue="{!v.loading}">
+            <c:Peak_LoadingGif />
+        </aura:if>
+
+        <lightning:layoutItem>
+            <iframe aura:id="asperato" width="{!v.width}" height="{!v.height}" frameborder="0" src="{!v.asperatoURL}"
+                onload="{!c.onLoadHandler}"></iframe>
+        </lightning:layoutItem>
+    </lightning:layout>
+
+</aura:component>

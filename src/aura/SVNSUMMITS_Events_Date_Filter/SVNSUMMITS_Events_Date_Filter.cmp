@@ -1,0 +1,102 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+
+	<!--Static resource Section Start-->
+	<ltng:require scripts="{!$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/LightningLookup/jquery-2.1.1.min.js'}"
+			afterScriptsLoaded="{!c.doInit}"/>
+	<!--Static resource Section Start-->
+
+	<!--Events Section Start-->
+	<aura:registerEvent name="appEvent" type="c:SVNSUMMITS_Events_Date_Filter_Event"/>
+	<!--Events Section Start-->
+
+	<!--<aura:handler event="c:SVNSUMMITS_Events_Date_Filter_Event" action="{!c.auraDateFilterEvent}"/>-->
+
+	<!--Attributes Declaration Section Start-->
+	<aura:handler name="change" value="{!v.fromDt}" action="{!c.dateChange}"/>
+	<aura:handler name="change" value="{!v.toDt}" action="{!c.dateChange}"/>
+
+	<aura:attribute name="debugMode" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="isRender" type="Boolean" default="true" access="global"/>
+	<aura:attribute name="filterLabel" default="{!$Label.c.ss_evt_label_Dates}" type="String" access="global"/>
+	<aura:attribute name="setDateButtonLabel" type="String" default="{!$Label.c.ss_evt_label_SelectButtonLabel}"
+	                access="global"/>
+	<aura:attribute name="fromDtLabel" type="String" default="{!$Label.c.ss_evt_label_From}" access="global"/>
+	<aura:attribute name="toDtLabel" type="String" default="{!$Label.c.ss_evt_label_To}" access="global"/>
+	<aura:attribute name="fromDt" type="Date" access="global"/>
+	<aura:attribute name="toDt" type="Date" access="global"/>
+	<aura:attribute name="strError" type="String[]" access="global"/>
+	<aura:attribute name="clearButtonLabel" default="{!$Label.c.ss_evt_label_Clear}" type="String" access="global"/>
+	<!--Attributes Declaration Section End-->
+
+	<style>
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			/* IE 11 only - can't get this to work in CSS */
+			.select.uiDatePicker--default,
+			.uiDatePicker--default .select {
+				padding-right: 0px !important;
+			}
+		}
+	</style>
+
+	<!--Date and Values Section Start-->
+	<div class="form-element__group">
+		<div class="slds-wrap slds-grid">
+			<div class="slds-form-element slds-size--9-of-12">
+				<div class="slds-text-heading--small slds-p-around--small">
+						{!v.filterLabel}
+				</div>
+			</div>
+
+			<div class="slds-form-element slds-size--3-of-12">
+				<lightning:button aura:id="clearButton"
+				                  label="{!v.clearButtonLabel}"
+				                  onclick="{!c.clearDates}"
+				                  class="toggleClass"
+				                  variant="neutral"/>
+			</div>
+		</div>
+
+		<div class="slds-wrap slds-grid">
+			<div class="slds-form-element slds-size--12-of-12 slds-p-around--x-small" id="stDate">
+				<lightning:input type="date"
+				                 aura:id="frmdate"
+				                 label="{!v.fromDtLabel}"
+				                 name="startDate"
+				                 value="{!v.fromDt}"/>
+
+				<!--<ui:inputDate aura:id="frmdate"-->
+				              <!--label="{!v.fromDtLabel+':'}"-->
+				              <!--class="slds-input dateInputStdate"-->
+				              <!--labelClass="slds-form-element__label"-->
+				              <!--value="{!v.fromDt}"-->
+				              <!--displayDatePicker="false"/>-->
+			</div>
+
+			<div class="slds-form-element slds-size--12-of-12 slds-p-around--x-small" id="endDt">
+				<lightning:input type="date"
+				                 aura:id="todate"
+				                 label="{!v.toDtLabel}"
+				                 name="endDate"
+				                 value="{!v.toDt}"/>
+				<!--<ui:inputDate aura:id="todate"-->
+				              <!--label="{!v.toDtLabel+':'}"-->
+				              <!--class="slds-input dateInputEnddate"-->
+				              <!--labelClass="slds-form-element__label"-->
+				              <!--value="{!v.toDt}"-->
+				              <!--displayDatePicker="false"/>-->
+			</div>
+
+		</div>
+
+		<ui:inputDefaultError aura:id="error" value="{!v.strError}"/>
+
+		<div class="slds-form-element slds-size--3-of-12 slds-p-around--small">
+			<lightning:button label="{!v.setDateButtonLabel}"
+			                  variant="neutral"
+			                  onclick="{!c.setDates}"/>
+		</div>
+	</div>
+	<!--Date and Values Section End-->
+</aura:component>

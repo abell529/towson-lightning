@@ -1,0 +1,17 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 5/23/18.
+ -->
+
+<design:component label="TU My Groups">
+    <design:attribute name="numberOfResults" label="Number of 'My Groups' results"/>
+    <design:attribute name="RecommendedGroup" label="Recommended Group ID"/>
+    <design:attribute name="GroupsUrl" label="Groups URL"/>
+
+    <design:attribute name="CustomClassName" label="Custom Class Name" description="Custom CSS class name. Usually remains blank." />
+    <design:attribute name="CustomIdName" label="Custom ID Name" description="Custom, distinct CSS ID name. Usually remains blank." />
+    <design:attribute name="recordId"
+                      label="Record Id"
+                      default="{!recordId}"
+                      description="Set to {!recordId} to pass the page's record Id."/>
+</design:component>

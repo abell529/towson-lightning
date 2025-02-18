@@ -1,0 +1,72 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component controller="SVNSUMMITS_EventListController"
+                access="global"
+                extends="c:SVNSUMMITS_Events_Base"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+
+	<ltng:require scripts="{!join(',',
+			$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/LightningLookup/jquery-2.1.1.min.js',
+			$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/jQuery/jquery-ui.js',
+			$Resource.SVNSUMMITS_Event_Custom + '/EventsCustom/moment-timezone-with-data.min.js')}"/>
+
+	<!-- Base model -->
+	<aura:attribute name="baseModel" type="String" access="global"/>
+	<aura:handler name="baseReady" event="c:SVNSUMMITS_Events_BaseReady" action="{!c.getFeaturedFourEvents}"/>
+
+	<aura:attribute name="recordId1" type="String" access="global"/>
+	<aura:attribute name="recordId2" type="String" access="global"/>
+	<aura:attribute name="recordId3" type="String" access="global"/>
+	<aura:attribute name="bandText" type="String" access="global" default="Featured Events"/>
+	<aura:attribute name="allEventsButtonText" type="String" default="{!$Label.c.ss_evt_label_AllEvents}" access="global"/>
+	<aura:attribute name="allEventsUrl" type="String" default="/event-list-view-page/" access="global"/>
+	<aura:attribute name="addNewEventButtonText" type="String" default="{!$Label.c.ss_evt_label_AddNewEvent}"
+	                access="global"/>
+	<aura:attribute name="addNewEventUrl" type="String" default="/create-event/" access="global"/>
+	<aura:attribute name="wrappedEventsObj" type="SVNSUMMITS_EventListWrapper" access="global"/>
+	<aura:attribute name="sitePath" type="String" access="global"/>
+	<aura:attribute name="sitePrefix" type="String" access="global"/>
+	<aura:attribute name="isObjectCreatable" type="Boolean" access="global"/>
+	<aura:attribute name="debugMode" type="Boolean" default="false" access="global"/>
+
+	<!-- Group related -->
+	<aura:attribute name="limitToSpecificGroups" type="Boolean" default="false" access="global"/>
+
+	<h2 class="slds-text-heading--medium slds-text-align--center setTitleFeatured">{!$Label.c.ss_evt_label_FeaturedEvents}</h2>
+
+	<div class="slds-col slds-has-flexi-truncate slds-p-around--medium">
+		<c:SVNSUMMITS_Events_Tile displayMode="3-Col"
+		                          debugMode="true"
+		                          wrappedEventsObj="{!v.wrappedEventsObj}"
+		                          totalEvents="{!v.wrappedEventsObj.objEventList.length}"
+		                          eventDetailURL="/event/"
+		                          isFeatured="true"
+		                          sitePath="{!v.sitePath}"
+		                          sitePrefix="{!v.sitePrefix}"
+		                          limitToSpecificGroups="{!v.limitToSpecificGroups}"/>
+	</div>
+	<div style="clear:both!important"></div>
+	<div class="slds-grid slds-grid--align-center">
+
+		<!--<div class="slds-button-group" role="group">-->
+			<!--<ui:outputURL label="{!$Label.c.ss_evt_label_AllEvents}"-->
+			              <!--class="slds-grid&#45;&#45;vertical-align-center slds-button&#45;&#45;brand slds-not-selected  btn-link"-->
+			              <!--value="{!v.sitePath + v.allEventsUrl}"/>-->
+		<lightning:layoutItem size="12"
+							  class="slds-align--absolute-center">
+			<lightning:button label="{!$Label.c.ss_evt_label_AllEvents}"
+							  onclick="{!c.gotoAllEventsUrl}"
+							  variant="brand"/>
+		<!--</div>-->
+		<!--<div class="slds-button-group" role="group">-->
+			<aura:if isTrue="{!v.isObjectCreatable}">
+				<lightning:button label="{!$Label.c.ss_evt_label_AddNewEvent}"
+								  onclick="{!c.gotoCreateEventsUrl}"
+								  variant="brand"/>
+
+				<!--<ui:outputURL class="slds-button&#45;&#45;brand  btn-primary"-->
+				              <!--value="{!v.sitePath + v.addNewEventUrl}" label="{!$Label.c.ss_evt_label_AddNewEvent}"/>-->
+			</aura:if>
+		<!--</div>-->
+		</lightning:layoutItem>
+	</div>
+</aura:component>

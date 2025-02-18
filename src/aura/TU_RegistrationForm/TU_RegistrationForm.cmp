@@ -1,0 +1,94 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by 7Summits - Joe Callin on 3/27/18.
+-->
+<aura:component description="TU_RegistrationForm" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" extends="c:Peak_Base" controller="TU_CommunitiesSelfRegController">
+
+    <aura:attribute name="requiredFields" type="List" default="firstName,lastName,email,gradYear,gradLastName"/>
+    <aura:attribute name="isInit" type="Boolean" default="false"/>
+    <aura:attribute name="isLoading" type="Boolean" default="false"/>
+
+    <aura:attribute name="regContact" type="Map"/>
+
+    <aura:attribute name="checkEmailUrl" type="String" default="/CheckPasswordResetEmail"/>
+
+    <aura:attribute name="CustomClassName" type="String" default=""/>
+    <aura:attribute name="CustomIdName" type="String" default=""/>
+    <aura:attribute name="regConfirmUrl" type="String" required="true" default="/CheckPasswordResetEmail"/>
+    <aura:attribute name="newUserUrl" type="String" required="true" default="/CheckPasswordResetEmail"/>
+    <aura:attribute name="firstNamePlaceholder" type="String" required="true" default="First Name"/>
+    <aura:attribute name="lastNamePlaceholder" type="String" required="true" default="Last Name"/>
+    <aura:attribute name="emailPlaceholder" type="String" required="true" default="Email"/>
+    <aura:attribute name="gradYearPlaceholder" type="String" required="true" default="Year of Graduation"/>
+    <aura:attribute name="gradLastNamePlaceholder" type="String" required="true" default="Last Name at Graduation"/>
+    <aura:attribute name="tuIdPlaceholder" type="String" required="true" default="TU Id"/>
+    <aura:attribute name="alumniIdPlaceholder" type="String" required="true" default="Alumni Id"/>
+    <aura:attribute name="patternGradYear" type="String" required="true" default="[1-2]{1}[0,9]{1}[0-9]{2}"/>
+    <aura:attribute name="invalidPatternGradYear" type="String" required="true" default="Please enter a number formatted YYYY"/>
+    <aura:attribute name="minLengthGradYear" type="Integer" default="4"/>
+    <aura:attribute name="maxLengthGradYear" type="Integer" default="4"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <section class="{!'peak-component ' + v.CustomClassName}" id="{!v.CustomIdName}">
+        <aura:if isTrue="{!v.isInit}">
+            <lightning:layout class="slds-grid_vertical">
+                <lightning:layoutItem flexibility="grow" class="slds-p-bottom_small">
+                    <p>Required Information</p>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="grow">
+                    <lightning:layout class="slds-grid_vertical">
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input aura:id="firstName" type="text" label="First Name" name="firstName" variant="label-hidden" value="{!v.regContact.FirstName}" placeholder="{!v.firstNamePlaceholder}" required="true" disabled="{!v.isLoading}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input aura:id="lastName" type="text" label="Last Name" name="lastName" variant="label-hidden" value="{!v.regContact.LastName}" placeholder="{!v.lastNamePlaceholder}" required="true" disabled="{!v.isLoading}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input aura:id="email" type="email" label="Email" name="email" variant="label-hidden" value="{!v.regContact.TU_Home_Email__c}" placeholder="{!v.emailPlaceholder}" required="true" disabled="{!v.isLoading}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input aura:id="gradYear" id="gradYear" type="text" label="Year of graduation" name="gradYear"
+                                             variant="label-hidden" value="{!v.regContact.GradYear_TU__c}"
+                                             placeholder="{!v.gradYearPlaceholder}" required="true"
+                                             disabled="{!v.isLoading}" maxlength="{!v.maxLengthGradYear}" minlength="{!v.minLengthGradYear}" pattern="{!v.patternGradYear}"
+                                             messageWhenPatternMismatch="{!v.invalidPatternGradYear}"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input aura:id="gradLastName" type="text" label="Last Name at Graduation" name="gradLastName" variant="label-hidden" value="{!v.regContact.LastNameatGraduation_TU__c}" placeholder="{!v.gradLastNamePlaceholder}" required="true" disabled="{!v.isLoading}"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout class="slds-grid_vertical">
+                <lightning:layoutItem flexibility="grow" class="slds-p-bottom_small">
+                    <p>Optional Information</p>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="grow">
+                    <lightning:layout class="slds-grid_vertical">
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input type="text" label="TU Id" name="tuId" variant="label-hidden" value="{!v.regContact.TU_EmplID__c}" placeholder="{!v.tuIdPlaceholder}" disabled="{!v.isLoading}" maxlength="7" />
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="grow" class="form-item">
+                            <lightning:icon iconName="utility:user" size="xx-small" alternativeText="User Icon" class="login-icon"/>
+                            <lightning:input type="text" label="Alumni Id" name="alumniId" variant="label-hidden" value="{!v.regContact.Advance_Id__c}" placeholder="{!v.alumniIdPlaceholder}" disabled="{!v.isLoading}" maxlength="10" />
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <lightning:layout class="slds-p-bottom_small">
+                <lightning:layoutItem flexibility="grow" class="button-container">
+                    <lightning:button variant="brand" label="Sign Up" onclick="{!c.registerClick}"/>
+                    <aura:if isTrue="{!v.isLoading}">
+                        <lightning:spinner variant="inverse" size="small"/>
+                    </aura:if>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </aura:if>
+    </section>
+</aura:component>

@@ -1,0 +1,45 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/12/18.
+ -->
+
+<aura:component description="TU_EventRSVPDetail" extends="c:TU_EventRSVPBase" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+
+    <aura:handler name="init" action="{!c.initRSVPDetail}" value="{!this}"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="eventProductsUrl" type="String"  default="/event-products"   access="global"/>
+
+    <lightning:layout>
+        <lightning:layoutItem size="1">&nbsp;</lightning:layoutItem>
+        <lightning:layoutItem size="10">
+            <section class="rsvp-detail">
+
+                <h1 class="slds-text-align_center">{!$Label.c.TU_RSVP_Detail_Title}</h1>
+                <aura:if isTrue="{!v.isInit}">
+                    <aura:iteration items="{!v.peakResponseRSVP.results}" var="rsvp" start="0" end="1">
+                        <!-- There will only be one item in this loop, the first RSVP -->
+
+                        <!-- Welcome message and RSVP update -->
+                        <c:TU_EventRSVPUpdate   peakResponseRSVP="{!v.peakResponseRSVP}"
+                                                eventProductsUrl="{!v.eventProductsUrl}"/>
+
+                        <!-- Related Registrant -->
+                        <!--<aura:if isTrue="{!v.peakResponseRSVP.results.length > 1}">-->
+                            <!--<hr class="thick"/>-->
+                            <!--<h4>{!$Label.c.TU_RSVP_Guests_Title}</h4>-->
+                            <!--<aura:iteration items="{!v.peakResponseRSVP.results}" var="rsvp" start="1">-->
+                                <!--<c:TU_EventRSVPUpdate peakResponseRSVP="{!v.peakResponseRSVP}"/>-->
+                            <!--</aura:iteration>-->
+                        <!--</aura:if>-->
+
+
+                    </aura:iteration>
+                </aura:if>
+
+            </section>
+
+        </lightning:layoutItem>
+        <lightning:layoutItem size="1">&nbsp;</lightning:layoutItem>
+    </lightning:layout>
+
+</aura:component>

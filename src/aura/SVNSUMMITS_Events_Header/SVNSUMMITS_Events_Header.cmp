@@ -1,0 +1,128 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component access="global"
+                controller="SVNSUMMITS_EventListController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+
+	<aura:registerEvent name="appEvent" type="c:SVNSUMMITS_Events_SortBy_Filter_Event"/>
+
+	<aura:handler event="c:SVNSUMMITS_Events_DisplayMode_Event" action="{!c.setDisplayMode}"/>
+	<aura:handler event="c:SVNSUMMITS_Events_Header_Event" action="{!c.setHeaderValues}"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:attribute name="debugMode" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="titletext" type="String" default="Events" required="true"
+	                access="global"/>
+	<aura:attribute name="createButtonURL" type="String" default="/create-event/" required="true" access="global"/>
+	<aura:attribute name="createButtonText" type="String" default="New Event" access="global"/>
+	<aura:attribute name="upcomingText" type="String" default="{!$Label.c.ss_evt_label_Upcoming}" access="global"/>
+	<aura:attribute name="topAttendanceText" type="String" default="{!$Label.c.ss_evt_label_TopAttendance}"
+	                access="global"/>
+	<aura:attribute name="defaultView" default="List" type="String" required="true" access="global"/>
+	<aura:attribute name="sortBy" type="String" access="global" default="Upcoming"/>
+	<aura:attribute name="sortByLabel" type="String" default="{!$Label.c.ss_evt_label_Upcoming}" access="global"/>
+	<aura:attribute name="sortByUpcoming" type="String" default="{!$Label.c.ss_evt_label_Upcoming}" access="global"/>
+	<aura:attribute name="sortByAttendance" type="String" default="{!$Label.c.ss_evt_label_TopAttendance}"
+	                access="global"/>
+	<aura:attribute name="hideViewOptions" type="Boolean" default="false" access="global"/>
+
+	<aura:attribute name="isObjectCreatable" type="Boolean" access="global" default="false"/>
+	<aura:attribute name="showCountbeforeTitle" type="Boolean" default="true" required="true" access="global"/>
+	<aura:attribute name="numberOfResults" type="Integer" default="0" access="global"/>
+
+	<aura:attribute name="displayMode" type="String" default="Full" required="true" access="global"/>
+	<aura:attribute name="sitePath" type="String" access="global"/>
+	<aura:attribute name="sitePrefix" type="String" access="global"/>
+	<aura:attribute name="iconPath"
+	                default="{!$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/SLDS00122/assets/icons/standard-sprite/svg/symbols.svg#event'}"
+	                type="String" access="global"/>
+	<aura:attribute name="iconCategory" default="standard" type="String" access="global"/>
+	<aura:attribute name="iconSize" default="large" type="String" access="global"/>
+	<aura:attribute name="iconName" default="event" type="String" access="global"/>
+	<aura:attribute name="newEventLabel" type="String" default="{!$Label.c.ss_evt_label_CreateNewEvent}"
+	                access="global"/>
+	<aura:attribute name="eventDetailURL" type="String" default="/s/event/" access="global"/>
+	<aura:attribute name="ListLabel" type="String" default="{!$Label.c.ss_evt_label_EventsList}" access="global"/>
+	<aura:attribute name="filterOn" default="None" type="String" access="global"/>
+	<aura:attribute name="listViewMode" type="String" access="global"/>
+	<aura:attribute name="currentOption" type="String" access="global" default="Upcoming"/>
+
+	<div class="slds-page-header SearchHeader" role="banner">
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col_padded slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_3-of-6 slds-large-size_6-of-12">
+				<div class="slds-media slds-media_responsive">
+					<div class="slds-media__figure eventIconM">
+						<lightning:icon iconName="standard:event" size="medium" alternativeText="Events"/>
+					</div>
+
+					<div class="slds-media__body">
+						<div class="slds-truncate searchHeaderFont slds-text-heading--large slds-p-left--small"
+						    title="All Events">{!v.numberOfResults || 0}&nbsp;{!v.titletext}</div>
+					</div>
+				</div>
+				<br clear="all"/>
+			</div>
+
+			<div class="slds-col_padded slds-size_1-of-1 slds-small-size_1-of-1 slds-medium-size_3-of-6 slds-large-size_6-of-12">
+				<div class="slds-col slds-no-flex slds-align-bottom viewFloat">
+					<div class="slds-grid">
+						<div class="slds-button-group" role="group">
+
+							<lightning:spinner aura:id="spinner"
+							                   class="slds-hide"
+							                   alternativeText="Loading...."
+							                   variant="brand"/>
+
+							<aura:if isTrue="{!v.isObjectCreatable}">
+								<lightning:button name="newEvent"
+								                  title="Create new event"
+								                  value="{!v.createButtonText}"
+								                  variant="brand"
+								                  label="{!v.createButtonText}"
+								                  onclick="{!c.gotoUrl}"/>
+							</aura:if>
+
+							<aura:if isTrue="{! !v.hideViewOptions}">
+								<!-- List view -->
+								<div class="slds-p-left_x-small">
+									<lightning:button name="listBTN"
+									                  title="Select list view"
+									                  aura:id="List"
+									                  value="{!$Label.c.ss_evt_label_List}"
+									                  iconName="utility:list"
+									                  onclick="{!c.setListView}"
+									                  label="{!$Label.c.ss_evt_label_List}"/>
+								</div>
+
+								<!-- Calendar view-->
+								<div class="slds-p-left_xxx-small">
+									<lightning:button name="calendarBTN"
+									                  title="Select calendar view"
+									                  class="slds-p-left_x-small"
+									                  aura:id="Calendar"
+									                  value="{!$Label.c.ss_evt_label_Calendar}"
+									                  iconName="utility:apps"
+									                  onclick="{!c.setCalendarView}"
+									                  label="{!$Label.c.ss_evt_label_Calendar}"/>
+								</div>
+							</aura:if>
+
+							<!-- Sort drop down -->
+							<div class="slds-p-left_x-small">
+								<label for="selectSortOption">Sort events by:</label>
+								<select class="slds-select"
+								        aura:id="sortDropdown"
+								        name="selectSortOption"
+										id="selectSortOption"
+								        onchange="{!c.onSortChange}"
+								        value="{!v.currentOption}">
+									<option label="{!v.upcomingText}" value="Upcoming">{!v.upcomingText}</option>
+									<option label="{!v.topAttendanceText}" value="TopAttendance">{!v.topAttendanceText}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</aura:component>

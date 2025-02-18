@@ -1,0 +1,136 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<aura:component controller="SVNSUMMITS_EventListController"
+                access="global"
+                extends="c:SVNSUMMITS_Events_Base"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName"
+>
+
+	<ltng:require scripts="{!join(',',
+					$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/LightningLookup/jquery-2.1.1.min.js',
+					$Resource.SVNSUMMITS_Event_Resource + '/EventsResource/jQuery/jquery-ui.js',
+					$Resource.SVNSUMMITS_Event_Custom + '/EventsCustom/moment-timezone-with-data.min.js')}"/>
+
+	<!-- Base model -->
+	<aura:attribute name="baseModel" type="String" access="global"/>
+	<aura:handler name="baseReady" event="c:SVNSUMMITS_Events_BaseReady" action="{!c.doInit}"/>
+
+	<!-- Handle component initialization in a client-side controller -->
+	<aura:handler event="c:SVNSUMMITS_Events_SortBy_Filter_Event" action="{!c.sortBy}"/>
+	<aura:handler event="c:SVNSUMMITS_Events_Date_Filter_Event" action="{!c.setDates}"/>
+	<aura:handler event="c:SVNSUMMITS_Events_Topic_Filter_Event" action="{!c.setTopic}"/>
+	<aura:handler event="c:SVNSUMMITS_Events_Location_Filter_Event" action="{!c.setLocation}"/>
+
+	<aura:registerEvent name="appEvent1" type="c:SVNSUMMITS_Events_DisplayMode_Event"/>
+	<aura:registerEvent name="appEvent" type="c:SVNSUMMITS_Events_Header_Event"/>
+
+	<!-- Init flag - Prevent multiple loading of the events list -->
+	<aura:attribute name="init" type="Boolean" default="false" access="global"/>
+
+	<!-- Dynamically load the list of events -->
+	<aura:attribute name="debugMode" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="displayMode" type="String" default="3-Col" access="global"/>
+	<aura:attribute name="wrappedEvents" type="SVNSUMMITS_EventListWrapper" access="global"/>
+	<aura:attribute name="searchstr" type="String" default="{!recordId}" access="global"/>
+	<aura:attribute name="recordId" type="String" access="global" default="{!recordId}"/>
+	<aura:attribute name="titletext" type="String" description="Event Title Text" access="global"/>
+	<aura:attribute name="numberofresults" type="Integer" description="" access="global"/>
+	<aura:attribute name="listSize" type="Integer" default="50" access="global"/>
+	<aura:attribute name="totalEvents" type="Integer" access="global"/>
+	<aura:attribute name="sortBy" type="String" default="Upcoming" access="global"/>
+	<aura:attribute name="sortByLabel" type="String" access="global"/>
+	<aura:attribute name="filterOn" default="None" type="String" access="global"/>
+	<aura:attribute name="filterType" type="String" access="global"/>
+	<aura:attribute name="eventDetailURL" type="String" default="/event/" access="global"/>
+	<aura:attribute name="sitePath" type="String" access="global"/>
+	<aura:attribute name="sitePrefix" type="String" access="global"/>
+	<aura:attribute name="currentURL" type="String" access="global"/>
+	<aura:attribute name="eventDayofWeek" type="String[]" access="global"/>
+	<aura:attribute name="eventMonth" type="String[]" access="global"/>
+	<aura:attribute name="eventDate" type="String[]" access="global"/>
+	<aura:attribute name="viewMoreLabel" type="String" default="{!$Label.c.ss_evt_label_AllEvents}" access="global"/>
+	<aura:attribute name="fromDate" type="String" access="global"/>
+	<aura:attribute name="toDate" type="String" access="global"/>
+
+	<aura:attribute name="filterByTopic" type="String" access="global"/>
+	<aura:attribute name="topicValue" type="String" access="global"/>
+	<aura:attribute name="filterSearchTerm" type="String" default="" access="global"/>
+
+	<aura:attribute name="listViewMode" type="String" default="List" access="global"/>
+	<aura:attribute name="listViewPageUrl" type="String" default="/event-list-view-page/" access="global"/>
+
+	<!-- Group related -->
+	<aura:attribute name="limitToSpecificGroups" type="Boolean" default="false" access="global"/>
+
+	<aura:if isTrue="{!v.listViewMode != 'Calendar'}">
+		<div class="recommendedDiv">
+			<aura:if isTrue="{!v.displayMode == 'Compact'}">
+				<h2 class="slds-text-heading--small slds-text-heading--weighted">{!v.titletext}</h2>
+			</aura:if>
+			<div>
+				<c:SVNSUMMITS_Events_Tile displayMode="{!v.displayMode}"
+				                          debugMode="True"
+				                          wrappedEventsObj="{!v.wrappedEvents}"
+				                          filterOn="{!v.filterOn}"
+				                          eventDetailURL="{!v.eventDetailURL}"
+				                          sitePath="{!v.sitePath}"
+				                          listSize="{!v.listSize}"
+				                          totalEvents="{!v.totalEvents}"
+				                          numberofresults="{!v.numberofresults}"
+				                          sitePrefix="{!v.sitePrefix}"
+				                          limitToSpecificGroups="{!v.limitToSpecificGroups}"/>
+			</div>
+
+			<aura:if isTrue="{!v.displayMode == 'Compact'}">
+				<div class="alignButton">
+					<ui:outputURL class="slds-button slds-button--brand slds-max-small-button--stretch"
+					              label="{!v.viewMoreLabel}"
+					              value="{!v.sitePath + v.listViewPageUrl}"/>
+				</div>
+			</aura:if>
+		</div>
+
+		<aura:if isTrue="{!v.displayMode != 'Compact'}">
+			<!-- Pagination -->
+			<div class="pagination">
+				<!-- Display pagination controls if we have the real estate for it. slds-m-left-large-->
+				<div class="slds-m-left--small slds-x-small-buttons--horizontal">
+                    <span class="slds-badge slds-theme--default">
+                    {!$Label.c.ss_evt_label_Page}&nbsp;
+		                    {!v.wrappedEvents.pageNumber} / {!v.wrappedEvents.totalPages}
+                    </span>
+
+					<div class="pull-right">
+						<aura:if isTrue="{!equals(v.wrappedEvents.hasPreviousSet, true)}">
+							<ui:button class="slds-button slds-button--neutral btn btn-link"
+							           label="{!$Label.c.ss_evt_label_Previous}"
+							           press="{!c.getPreviousPage}"/>
+						</aura:if>
+
+						<aura:if isTrue="{!equals(v.wrappedEvents.hasNextSet , true)}">
+							<ui:button class="slds-button slds-button--neutral btn btn-link"
+							           label="{!$Label.c.ss_evt_label_Next}"
+							           press="{!c.getNextPage}"/>
+						</aura:if>
+					</div>
+				</div>
+			</div>
+		</aura:if>
+	</aura:if>
+
+	<aura:if isTrue="{!v.listViewMode == 'Calendar'}">
+		<c:SVNSUMMITS_Events_Calendar_View titletext="{!v.titletext}"
+		                                   numberofresults="{!v.numberofresults}"
+		                                   listSize="{!v.listSize}"
+		                                   topicValue="{!v.topicValue}"
+		                                   sortBy="{!v.sortBy}"
+		                                   filterByTopic="{!v.filterByTopic}"
+		                                   searchstr="{!v.searchstr}"
+		                                   filterOn="{!v.filterOn}"
+		                                   fromDate="{v.fromDate}"
+		                                   toDate="{!v.toDate}"
+		                                   listViewMode="{!v.listViewMode}"
+		                                   sitePath="{!v.sitePath}"
+		                                   sitePrefix="{!v.sitePrefix}"/>
+	</aura:if>
+
+</aura:component>

@@ -1,0 +1,19 @@
+<!--
+ - Copyright (c) 2018. 7Summits Inc.
+ - Created by Kaj Petersen on 4/25/18.
+ -->
+
+<design:component label="7S Cart Payment with Asperato">
+
+    <design:attribute name="height" label="Height (px/%)" />
+    <design:attribute name="width" label="Width (px/%)"/>
+    <design:attribute name="paymentConfirmURL"
+                    label="Payment Confirmation page URL"
+                    description="Set the page URL after payment is confirmed"/>
+    <design:attribute name="paymentCancelURL"
+                    label="Payment cancelled page URL"
+                    description="Set the page URL when the cancel like is pressed on payment page"/>
+    <design:attribute name="paymentErrorURL"
+                    label="Payment Confirmation page URL"
+                    description="Set the page URL when the Close without Retry button is pressed on the error page"/>
+</design:component>

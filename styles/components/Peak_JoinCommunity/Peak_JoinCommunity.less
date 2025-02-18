@@ -1,0 +1,93 @@
+.face(@top: 0rem,@left: 0%,@width: 10%)
+{
+    top: @top;
+    left: @left;
+
+    width: @width;
+}
+.THIS
+{
+    background: @borderColor;
+
+    @import '../_base/components-common';
+
+    .facepile
+    {
+        position: relative;
+        .face
+        {
+            position: absolute !important;
+            z-index: 1;
+
+            .box(100%);
+            .inner
+            {
+                border-radius: 50%;
+                background-color: @white;
+                background-size: cover;
+            }
+            &:nth-child(even)
+            {
+                z-index: 2;
+
+                .inner
+                {
+                    background-color: @lightGray;
+                }
+            }
+
+            .inner
+            {
+                h1
+                {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+
+                    margin-top: -1rem;
+                    margin-left: -.5rem;
+                }
+            }
+
+            &:nth-child(1)
+            {
+                .face(3rem,0,8%);
+            }
+
+            &:nth-child(2)
+            {
+                .face(3.5rem,6%,13%);
+            }
+
+            &:nth-child(3)
+            {
+                // Actually give this one height for the container!
+                position: relative !important;
+
+                width: 20%;
+                margin: @paddingSmall 0;
+                margin-left: 18%;
+            }
+
+            &:nth-child(4)
+            {
+                .face(3rem,37%,18%);
+            }
+
+            &:nth-child(5)
+            {
+                .face(0rem,54%,24%);
+            }
+
+            &:nth-child(6)
+            {
+                .face(3.5rem,77%,15%);
+            }
+
+            &:nth-child(7)
+            {
+                .face(3rem,90%,10%);
+            }
+        }
+    }
+}

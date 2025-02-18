@@ -1,0 +1,21 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component label="7S Events Create">
+	<design:attribute name="debugMode"
+	                  label="Debug Mode"
+	                  description="Enable/disable debug mode" />
+	<design:attribute name="useTopics"
+	                  label="Require topics"
+	                  description="Require the user to select at least one topic"/>
+    <design:attribute name="autoApproveEvents"
+                      label="Auto Approve Events"
+                      description="If Selected Events will be created with Status 'Approved' else 'Created'"/>
+    <design:attribute name="pathToDetail"
+                      label="Path To Detail"
+                      description="Enter Events Detail Page URL"/>
+    <design:attribute name="allEventsUrl"
+                      label="Events List View URL"
+                      description="Enter Events List View URL"/>
+	<design:attribute name="limitToSpecificGroups"
+	                  label="Enable Limit to Specific Groups?"
+	                  description="Check to limit to specified groups only"/>
+</design:component>

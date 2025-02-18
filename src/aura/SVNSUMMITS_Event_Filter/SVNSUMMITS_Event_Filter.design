@@ -1,0 +1,16 @@
+<!-- Copyright ©2016-2017 7Summits Inc. All rights reserved. -->
+<design:component label="7S Events Filter">
+	<design:attribute name="showDateFilter"
+	                  label="Show date filter"
+	                  description="Check to enable the date filter"/>
+	<design:attribute name="showTopicFilter"
+	                  label="Show topic filter"
+	                  description="Check to enable the topic filter"/>
+	<design:attribute name="showLocationFilter"
+	                  label="Show location name filter"
+	                  description="Check to enable the event location name filter"/>
+
+	<design:attribute name="searchThreshold"
+	                  label="Search threshold"
+	                  description="Number of characters needed to initiate the search"/>
+</design:component>
